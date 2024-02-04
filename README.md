@@ -1,5 +1,5 @@
 ﻿Website to compare cars easily. Listed most of the cars available in India 
-////////////
+ ----------------------
 Steps to run the project
 ----------------------
 1. Install postgresql from : https://www.postgresql.org/download/
