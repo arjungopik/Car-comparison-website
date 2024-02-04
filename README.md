@@ -1,4 +1,5 @@
-﻿Website to compare cars easily. Listed most of the cars available in India 
+﻿Website to compare cars easily. Listed most of the cars available in India.
+ Developed back-end with Flask and SqlAlchemy.
  ----------------------
 Steps to run the project
 ----------------------
