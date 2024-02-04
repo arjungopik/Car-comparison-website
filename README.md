@@ -17,8 +17,7 @@ Note
 ----
 For updation and modification in car datas update the datas in excel sheet named 'Book.xlsx' and use step 8 to update the database.
 
-
-////////////////////////////////////////
+-------------------
 For any queries feel free to contact in my mail,
 arjungopik111@gmail.com
 
