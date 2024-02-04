@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ row.model }}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/preview.css') }}" />
+  </head>
+  <body>
+    <div class="main-container">
+      <span class="brand-name">{{ row.brand }}</span>
+      <div class="product-page">
+        <div class="flex-row-db">
+          <span class="final-days-save"
+            >FINAL DAYS TO SAVE $700! FREE BIKE SHIPPING!<br /></span
+          ><span class="final-days-save-1"
+            >FINAL DAYS TO SAVE $700! FREE BIKE SHIPPING!<br
+          /></span>
+        </div>
+        <div class="rectangle">
+          <div class="vector"></div>
+          <span class="hatchbacks">Hatchbacks</span
+          ><span class="contact-us">Contact us</span
+          ><span class="compare">Compare</span
+          ><span class="wishlist">Wishlist</span
+          ><span class="sedans">Sedans</span><span class="cars">Cars</span>
+        </div>
+        <div class="flex-row-bda">
+          <div class="group"></div>
+          <span class="good-looks-speed"
+            >Good looks, speed and affordability, this one checks all the
+            boxes.</span
+          ><span class="impressive-stylish-electric"
+            >Impressive... a stylish electric bycicle that won’t break the
+            bank.</span
+          ><span class="wing-launches-new"
+            >Wing launches new Freedom X, a stylish e-bike at a more
+            budget-friendly price.</span
+          >
+          <div class="logo">
+            <div class="capa-x"><div class="vector-2"></div></div>
+          </div>
+          <div class="logo-3">
+            <div class="capa-x-4"><div class="vector-5"></div></div>
+          </div>
+          <div class="logo-6">
+            <div class="capa-x-7"><div class="vector-8"></div></div>
+          </div>
+        </div>
+        <span class="features">Features</span>
+        <div class="wing-logo"></div>
+        <div class="group-9">
+          <span class="brand-name-bikes"
+            >© 2022 Brand name BIKES Inc. All Rights Reserved</span
+          >
+          <div class="group-a"><div class="rectangle-b"></div></div>
+          <span class="subscribe-and-save">Suscribe and save </span
+          ><span class="explore">EXPLORE </span
+          ><span class="about">ABO UT </span><span class="help">HELP</span
+          ><span class="inbox-offers-support"
+            >Get offers and support right from your inbox</span
+          ><span class="dealer-contact"
+            >Find a dealer<br />Become a dealer<br />Contact us<br /><br /></span
+          ><span class="freedom"
+            >Freedom X<br />Freedom ST<br />Freedom 2<br />Freedom Fatty</span
+          ><span class="privacy-terms-shipping"
+            >Privacy Policy<br />Term of services<br />Billing Terms &
+            Condicions<br />Shipping Policy</span
+          >
+          <div class="social-networks"></div>
+          <div class="tarjetas"></div>
+        </div>
+        <div class="flex-row-a">
+          <div class="image"><img src="{{ url_for('static',filename='assets/images/xlightershadow1632885262000-6@2x.png' ) }}" alt=""></div>
+          <span class="audi-a">{{row.model}}</span>
+          <div class="starting-at">
+            <span class="starting-at-c">Starting at</span
+            ><span class="price"> {{row.price}}</span>
+          </div>
+        </div>
+        <span class="description"
+          >{{row.description}}</span
+        >
+        <div class="flex-row-dc">
+          <a href="/addtocart/{{row.id}}" class="order-now">ORDER NOW</a>
+        </div>
+        <div class="flex-row-d">
+          <div class="rectangle-e"></div>
+          <div class="rectangle-f"></div>
+          <span class="model-name">Model Name </span
+          ><span class="feature-text">{{row.model}}</span>
+        </div>
+        <div class="flex-row-d-10">
+          <div class="rectangle-11"></div>
+          <span class="year-of-release">Year of release</span
+          ><span class="feature-text-12">{{row.year}}</span>
+        </div>
+        <div class="flex-row-ce">
+          <div class="rectangle-13"></div>
+          <span class="colours">Colours</span
+          ><span class="feature-text-14">{{row.colours}}</span>
+        </div>
+        <div class="flex-row-aeb">
+          <div class="rectangle-15"></div>
+          <span class="fuel-type">Fuel Type</span
+          ><span class="feature-text-fuel">{{row.fuel}}</span>
+        </div>
+        <div class="flex-row-eae">
+          <div class="rectangle-16"></div>
+          <span class="mileage">Mileage</span
+          ><span class="feature-text-mileage">{{row.mileage }}</span>
+        </div>
+        <div class="flex-row-d-17">
+          <div class="rectangle-18"></div>
+          <span class="seating-capacity">Seating Capacity</span
+          ><span class="feature-text-model-name">{{row.seat_capacity }}</span>
+        </div>
+        <div class="flex-row">
+          <div class="rectangle-19"></div>
+          <span class="tyre-size">Tyre Size</span
+          ><span class="feature-text-model-name-1a">{{row.tyre_size}}</span>
+        </div>
+        <div class="flex-row-db-1b">
+          <div class="rectangle-1c"></div>
+          <span class="airbags">Airbags</span
+          ><span class="feature-text-model-name-1d">{{row.air_bags}}</span>
+        </div>
+        <div class="flex-row-b">
+          <div class="rectangle-1e"></div>
+          <span class="cruise-control">Cruise control</span
+          ><span class="feature-text-model-name-1f">{{row.cruise_ctrl}}</span>
+        </div>
+        <div class="flex-row-c">
+          <div class="rectangle-20"></div>
+          <span class="engine-cc">Engine ( CC )</span
+          ><span class="feature-text-21">{{row.engine}}</span>
+        </div>
+        <div class="flex-row-22">
+          <div class="rectangle-23"></div>
+          <span class="cylinder">Cylinder</span
+          ><span class="feature-text-24">{{row.cylinders}}</span>
+        </div>
+        <div class="flex-row-d-25">
+          <div class="rectangle-26"></div>
+          <span class="transmission">Transmission</span
+          ><span class="feature-text-27">{{row.transmission}}</span>
+        </div>
+        <div class="flex-row-be">
+          <div class="rectangle-28"></div>
+          <span class="gearbox">Gearbox</span
+          ><span class="feature-text-29">{{row.gear_box}}</span>
+        </div>
+        <div class="flex-row-f">
+          <div class="rectangle-2a"></div>
+          <span class="drive-type">Drive type</span
+          ><span class="feature-text-2b">{{row.drive_type}}</span>
+        </div>
+      </div>
+    </div>
+    <!-- Generated by Codia AI - https://codia.ai/ -->
+  </body>
+</html>

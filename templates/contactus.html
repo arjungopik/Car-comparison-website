@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand name</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/contactus.css') }}">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+
+            <ul>
+                <li>
+                    <h2>Brand name</h2>
+                </li>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#education">education</a>
+                </li>
+                <li>
+                    <a href="#experience-section">Working Experience</a>
+                </li>
+
+                <li>
+                    <a href="#testimonial-section">Testimonials</a>
+                </li>
+                <li>
+                    <a href="#news-section">News</a>
+                </li>
+                <li>
+                    <a href="#contactus-section">Contact</a>
+                </li>
+            </ul>
+            <div class="search">
+                <input type="text">
+            </div>
+        </nav>
+    </div>
+    <section class="contactus">
+        <div class="wrapper">
+            <div class="left">
+                <h5>Contact us</h5>
+                <h4>Email : Brand@Gggcars.com</h4>
+                <h4>Phone: (212) 292-5641</h4>
+                <p>IMPORTANT: For technical support enquiries, please include photos and/or videos in your email to help our
+                    tezam expedite your inquiry.</p>
+            </div>
+            <div class="right">
+                <form action="/contactus" method="POST">
+                    <div class="row">
+                        <h3>First Name*</h3>
+                        <h3>Last Name</h3>
+                    </div>
+                    <div class="row">
+                        <input type="text" placeholder="Eg. John" name="fname">
+                        <input type="text" placeholder="Eg: Smith" name="lname">
+                    </div>
+                    <div class="row"><h3>Email*</h3></div>
+                    <div class="row">
+                        <input type="text" placeholder="Eg. johnsmith@gmail.com" name="email">
+                    </div>
+                    <div class="row"><h3>Message*</h3></div>
+                    <div class="row">
+                        
+                        <textarea rows="8" placeholder="Eg. Let us know how we can help" name="message"></textarea>
+                    </div>
+                    <button type="submit">Send message</button>
+                </form>
+            </div>
+        </div>
+    
+    </section>
+    
+</body>
+
+</html>
