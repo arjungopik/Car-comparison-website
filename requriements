@@ -1,5 +1,0 @@
-pip install flask
-pip install flask_sqlalchemy
-pip install psycopg2 
-pip install openpyxl
-pip install pandas

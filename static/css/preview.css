@@ -208,6 +208,16 @@ button {
   white-space: nowrap;
   z-index: 84;
 }
+.product-page .rectangle a{
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 .cars {
   display: flex;
   align-items: flex-start;
@@ -236,13 +246,12 @@ button {
 .group {
   position: absolute;
   width: 1728px;
-  height: 245px;
+  height: 105px;
   top: 0;
   left: 0;
-  background: url(./assets/images/833168d5-bd27-44e7-aaac-d6d5b5f4e76c.png)
-    no-repeat center;
   background-size: cover;
   z-index: 7;
+  background-color: #000;
 }
 .good-looks-speed {
   display: flex;
@@ -317,8 +326,6 @@ button {
   height: 100%;
   top: 0;
   left: 0;
-  background: url(./assets/images/b37c70e2-3c2f-4706-92b2-18fe07666674.png)
-    no-repeat center;
   background-size: 100% 100%;
   z-index: 13;
 }
@@ -344,8 +351,6 @@ button {
   height: 100%;
   top: 0;
   left: 0;
-  background: url(./assets/images/608ddfd6-cfcb-4d7a-abe8-446282b30222.png)
-    no-repeat center;
   background-size: 100% 100%;
   z-index: 19;
 }
@@ -371,8 +376,6 @@ button {
   height: 100%;
   top: 0;
   left: 0;
-  background: url(./assets/images/6aecb1fc-b036-47cd-82bc-21ca84e931f3.png)
-    no-repeat center;
   background-size: 100% 100%;
   z-index: 16;
 }
@@ -590,8 +593,6 @@ button {
   height: 23px;
   top: 182px;
   left: 199px;
-  background: url(./assets/images/8683989e-211c-4b5e-8e74-c91b45ef24f0.png)
-    no-repeat center;
   background-size: cover;
   z-index: 35;
   overflow: hidden;
@@ -602,27 +603,23 @@ button {
   height: 34px;
   top: 230px;
   left: 200px;
-  background: url(./assets/images/7bc085e867fba25a3b457524a8304bc719e4806c.png)
-    no-repeat center;
   background-size: cover;
   z-index: 36;
 }
 .flex-row-a {
   position: absolute;
   width: 1300px;
-  height: 643px;
+  height: 43px;
   top: 159px;
   left: 85px;
   z-index: 6;
 }
-.image {
+.image img{
   position: absolute;
-  width: 196px;
-  height: 643px;
+  width: 896px;
+  height: 603px;
   top: 0;
   left: 0;
-  background: url(./assets/images/0b17491d88bb4443f45f3fd0f38225cf830e3901.png)
-    no-repeat center;
   background-size: cover;
   z-index: 6;
 }
@@ -702,6 +699,9 @@ button {
   font-size: 0px;
   z-index: 4;
 }
+.order-now a{
+  text-decoration: None;
+}
 .order-now {
   display: flex;
   align-items: flex-start;
@@ -709,7 +709,7 @@ button {
   position: relative;
   width: 203px;
   height: 28px;
-  margin: 11px 0 0 105px;
+
   color: #000;
   font-family: Poppins, var(--default-font-family);
   font-size: 16px;
@@ -941,7 +941,7 @@ button {
   position: absolute;
   height: 25px;
   top: 30px;
-  left: 738px;
+  left: 730px;
   color: #000000;
   font-family: Inter, var(--default-font-family);
   font-size: 20px;
@@ -993,7 +993,7 @@ button {
   position: absolute;
   height: 24px;
   top: 31px;
-  left: 694px;
+  left: 734px;
   color: #000000;
   font-family: Inter, var(--default-font-family);
   font-size: 20px;
@@ -1045,7 +1045,7 @@ button {
   position: absolute;
   height: 25px;
   top: 25px;
-  left: 711px;
+  left: 734px;
   color: #000000;
   font-family: Inter, var(--default-font-family);
   font-size: 20px;
@@ -1097,7 +1097,7 @@ button {
   position: absolute;
   height: 25px;
   top: 25px;
-  left: 711px;
+  left: 700px;
   color: #000000;
   font-family: Inter, var(--default-font-family);
   font-size: 20px;
@@ -1149,7 +1149,7 @@ button {
   position: absolute;
   height: 25px;
   top: 27px;
-  left: 711px;
+  left: 734px;
   color: #000000;
   font-family: Inter, var(--default-font-family);
   font-size: 20px;
@@ -1201,7 +1201,7 @@ button {
   position: absolute;
   height: 25px;
   top: 27px;
-  left: 711px;
+  left: 734px;
   color: #000000;
   font-family: Inter, var(--default-font-family);
   font-size: 20px;
@@ -1253,7 +1253,7 @@ button {
   position: absolute;
   height: 25px;
   top: 28px;
-  left: 711px;
+  left: 734px;
   color: #000000;
   font-family: Inter, var(--default-font-family);
   font-size: 20px;
@@ -1305,7 +1305,7 @@ button {
   position: absolute;
   height: 25px;
   top: 27px;
-  left: 711px;
+  left: 734px;
   color: #000000;
   font-family: Inter, var(--default-font-family);
   font-size: 20px;
@@ -1357,7 +1357,7 @@ button {
   position: absolute;
   height: 25px;
   top: 28px;
-  left: 711px;
+  left: 734px;
   color: #000000;
   font-family: Inter, var(--default-font-family);
   font-size: 20px;
@@ -1409,7 +1409,7 @@ button {
   position: absolute;
   height: 25px;
   top: 27px;
-  left: 711px;
+  left: 734px;
   color: #000000;
   font-family: Inter, var(--default-font-family);
   font-size: 20px;
@@ -1461,7 +1461,7 @@ button {
   position: absolute;
   height: 25px;
   top: 25px;
-  left: 745px;
+  left: 734px;
   color: #000000;
   font-family: Inter, var(--default-font-family);
   font-size: 20px;

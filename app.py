@@ -161,6 +161,11 @@ def audi():
     return render_template('allcarpreview.html',rows= row,fun = 'all')
 
 
+@app.route('/volvocars')
+def volvo():
+    row = datas.query.filter(datas.brand == 'volvo').all()
+    return render_template('allcarpreview.html',rows= row,fun = 'all')
+
 
 @app.route('/cartview')
 def cart():
