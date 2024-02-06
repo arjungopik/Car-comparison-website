@@ -8,7 +8,16 @@ import pandas as pd
 id1 = 53
 id2 = 52
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:user@localhost:5432/carcmp'
+username = 'postgres'
+password = 'user'
+host = 'localhost'
+port = '5432'
+database_name = 'carcmp'
+
+database_uri = f'postgresql://{username}:{password}@{host}:{port}/{database_name}'
+
+
+app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
