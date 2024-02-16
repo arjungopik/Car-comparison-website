@@ -1034,6 +1034,7 @@ header .foot{
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    
   }
   .star-a {
     width: 231px;

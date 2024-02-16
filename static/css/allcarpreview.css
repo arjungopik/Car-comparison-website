@@ -426,13 +426,25 @@ button {
 .rectangle-a {
   position: relative;
   width: 342.511px;
-  margin:5px;
+  margin:5px 47px;
   cursor: pointer;
   background: transparent;
   background: no-repeat center;
   background-size: cover;
   border: none;
   z-index: 4;
+}
+.rectangle-m {
+  position: relative;
+  width: 343px;
+  margin:5px 0;
+  cursor: pointer;
+  background: transparent;
+  background: no-repeat center;
+  background-size: cover;
+  border: none;
+  z-index: 4;
+  font-size: 21px;
 }
 .order-now {
   display: flex;
@@ -560,6 +572,7 @@ a#brand:hover{
   text-align: left;
   white-space: nowrap;
   z-index: 2;
+  width: 200px;
 }
 .dollar {
   display: flex;

@@ -69,6 +69,15 @@ class kart(db.Model):
     description = db.Column(db.String)
     price = db.Column(db.String)
 
+class Wishlist(db.Model):
+    __tablename__ = 'wishlist'
+    brand = db.Column(db.String)
+    carsid = db.Column(db.Integer)
+    id = db.Column(db.Integer, primary_key=True)    
+    model =db.Column(db.String)
+    description = db.Column(db.String)
+    price = db.Column(db.String)
+
 class cars(db.Model):
     __tablename__ = 'carcmp'
     id = db.Column(db.Integer ,primary_key = True)
@@ -132,6 +141,16 @@ def addcart(id):
     db.session.commit()
     return redirect(url_for('cart'))
 
+
+@app.route('/addtowishlist/<id>')
+def addwishlist(id):
+    row = datas.query.get(id)
+    data = Wishlist( carsid = id,model = row.model ,brand = row.brand, description = row.description,price = row.price)
+    db.session.add(data)
+    db.session.commit()
+    return redirect(url_for('wishlist'))
+
+
 @app.route('/addcompare/<id>')
 def addcompare(id):
     global id2,id1
@@ -179,6 +198,13 @@ def volvo():
 @app.route('/cartview')
 def cart():
     row = kart.query.all()
+    return render_template('allcarpreview.html',rows= row,func = 'cart')
+
+
+
+@app.route('/wishlistview')
+def wishlist():
+    row = Wishlist.query.all()
     return render_template('allcarpreview.html',rows= row,func = 'cart')
 
 @app.route('/allcars')

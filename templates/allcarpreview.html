@@ -15,17 +15,18 @@
     <div class="flex-row-d">
       <div class="rectangle">
         <div class="vector"></div>
-        <span class="hatchbacks"><a  href="/">Hatchbacks</a></span><span class="contact-us"><a href="/contact">Contact us</a></span>
-        <span class="wishlist"><a  href="/cartview">Wishlist </a></span>
-        <span class="cars"><a  href="/allcars">Cars</a></span>
-        <span class="sedans"><a  href="/">Sedans</a></span>
-          
+        <span class="hatchbacks"><a href="/">Hatchbacks</a></span><span class="contact-us"><a href="/contact">Contact
+            us</a></span>
+        <span class="wishlist"><a href="/cartview">Wishlist </a></span>
+        <span class="cars"><a href="/allcars">Cars</a></span>
+        <span class="sedans"><a href="/">Sedans</a></span>
+
       </div>
-    
+
       <span class="brand-name"><a href="/" id="brand">Brand name</a></span>
       {% if fun == 'all' %}
       <button class="rectangle-1">
-       
+
         <span class="seating-capacity">Seating capacity</span>
         <div class="vector-2"></div>
       </button>
@@ -54,12 +55,19 @@
         <a id="viewmore" href="/preview/{{row.id}}" class="rectangle-a">
           VIEW MORE
         </a>
-        <a id="compare" href="/addcompare/{{row.id}}" class="rectangle-a">
-          ADD TO COMPARE
-        </a>
-       
-      <span class="fits-most-riders">*Fits most riders 5'6" - 6'4"</span><span
-          class="freedom">{{row.brand | upper   }} - {{ row.model | upper }}</span><span class="dollar">{{row.price}}</span>
+        <div style="display: flex;" class="row"><a id="compare" href="/addcompare/{{row.id}}" class="rectangle-m">
+            ADD TO COMPARE
+          </a>
+          <a id="compare" href="/addtowishlist/{{row.id}}" class="rectangle-m">
+          ADD TO WISHLIST
+          </a>
+        </div>
+
+
+
+        <span class="fits-most-riders">*Fits most riders 5'6" - 6'4"</span><span class="freedom">{{row.brand | upper }}
+          -
+          {{ row.model | upper }}</span><span class="dollar">{{row.price}}</span>
       </div>
       <div class="pic-3"></div>
       <div class="image"><img
