@@ -32,6 +32,7 @@ class datas(db.Model):
     model = db.Column(db.String)
     year = db.Column(db.String)
     price = db.Column(db.String)
+    type = db.Column(db.String)
     colours = db.Column(db.String)
     fuel = db.Column(db.String)
     mileage = db.Column(db.String)
@@ -90,10 +91,10 @@ def index():
 
 @app.route('/importing')
 def excel_file_import():
-    excel_file = 'Book.xlsx'
+    excel_file = 'cars.xlsx'
     df = pd.read_excel(excel_file)
     for index, row in df.iterrows():
-        mileage = str(row['milege']).split()[0]
+        mileage = str(row['mileage']).split()[0]
         price = str(row['price']).replace(' ','')
         boot_spac=str(row['bootspace']).split()[0]
         seat_capacity = str(row['seat_capacity']).split()[0]
@@ -103,6 +104,7 @@ def excel_file_import():
             model=row['model'],
             year=row['year'],
             price=price,
+            type=str(row['type']).split()[0],
             colours=row['colours'],
             fuel=row['fuel'],
             mileage=mileage,
