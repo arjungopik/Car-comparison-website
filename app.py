@@ -159,6 +159,30 @@ def addcompare(id):
     print(id1,id2)
     return redirect(url_for('compare'))
 
+@app.route('/filter', methods=['POST', 'GET'])
+def filter():
+    if request.method == 'POST':
+        seat = request.form.get('seating')  # Use request.form.get to get form data
+        brand = request.form.get('brand')
+        color = request.form.get('color')
+        fuel = request.form.get('fuel')
+
+        query = db.session.query(datas)
+
+        if seat != "":
+            query = query.filter(datas.seat_capacity == seat)  # Correct variable name to seat
+        if brand != "":
+            query = query.filter(datas.brand == brand)
+        if color != "":
+            query = query.filter(datas.colours == color)
+        if fuel != "":
+            query = query.filter(datas.fuel == fuel)
+
+        results = query.all()
+        return render_template('allcarpreview.html', rows=results, fun='all')
+
+    return "Method not allowed", 405  # Return method not allowed if not POST request
+
 @app.route('/compare')
 def compare():
     global id2,id1

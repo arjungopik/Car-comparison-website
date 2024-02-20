@@ -613,6 +613,10 @@ a#brand:hover{
   background-size: cover;
   z-index: 10;
 }
+.image img{
+  width: 700px;
+  height: 400px;
+}
 .rectangle-c {
   position: relative;
   width: 1535px;
@@ -631,6 +635,23 @@ a#brand:hover{
   font-size: 0px;
   z-index: 21;
 }
+.row{
+  display: flex;
+  justify-content:space-evenly;
+  z-index: 100px;
+  padding-top: 111px;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 400;
+}
+.row .col{
+  background-color: #000;
+  color: #fff;
+  padding: 11px;
+  width: 300px;
+}
+
+
 .the-freedom-d {
   display: flex;
   align-items: flex-start;

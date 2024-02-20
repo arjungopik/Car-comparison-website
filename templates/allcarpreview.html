@@ -25,23 +25,49 @@
 
       <span class="brand-name"><a href="/" id="brand">Brand name</a></span>
       {% if fun == 'all' %}
-      <button class="rectangle-1">
+      <form action="/filter" method="POST">
+        <div class="row">
+            <div class="col">
+              <label for="seating">Seating capacity :</label>
+              <select id="seating" name="seating">
+                <option value="">None</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+            </div>
+          <div class="col">
+            <label for="brand">Brand :</label>
+            <select id="brand" name="brand">
+              <option value="">None</option>
+              <option value="">Toyota</option>
+              <option value="">Mercedes</option>
+              <option value="KIA">KIA</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="color">Color :</label>
+            <select id="color" name="color">
+              <option value="">None</option>
+              <option value="">4</option>
+              <option value="">5</option>
+              <option value="">6</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="fuel">Fuel :</label>
+            <select id="fuel" name="fuel">
+              <option value="">None</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          
+          <button type="submit">Search</button>
+        </div>
 
-        <span class="seating-capacity">Seating capacity</span>
-        <div class="vector-2"></div>
-      </button>
-      <div class="rectangle-3">
-        <span class="brand">Brand</span>
-        <div class="vector-4"></div>
-      </div>
-      <div class="rectangle-5">
-        <span class="colour">Colour</span>
-        <div class="vector-6"></div>
-      </div>
-      <div class="rectangle-7">
-        <span class="fuel">Fuel</span>
-        <div class="vector-8"></div>
-      </div>
+      </form>
       {% endif %}
     </div>
 
@@ -59,7 +85,7 @@
             ADD TO COMPARE
           </a>
           <a id="compare" href="/addtowishlist/{{row.id}}" class="rectangle-m">
-          ADD TO WISHLIST
+            ADD TO WISHLIST
           </a>
         </div>
 
@@ -70,8 +96,10 @@
           {{ row.model | upper }}</span><span class="dollar">{{row.price}}</span>
       </div>
       <div class="pic-3"></div>
-      <div class="image"><img
-          src="{{ url_for('static',filename='assets/images/xlightershadow1632885262000-6@2x.png' ) }}" alt=""></div>
+      <div class="image">
+        <img src="{{ url_for('static', filename='assets/carimage/' + row.model.lower().replace(' ', '') + '.jpg') }}">
+
+      </div>
     </div>
     {%endfor%}
 
