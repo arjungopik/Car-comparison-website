@@ -73,7 +73,7 @@
           <div class="tarjetas"><img src="{{ url_for('static',filename='assets/images/7bc085e867fba25a3b457524a8304bc719e4806c2x.png' ) }}" alt=""></div>
         </div>
         <div class="flex-row-a">
-          <div class="image"><img src="{{ url_for('static',filename='assets/images/xlightershadow1632885262000-6@2x.png' ) }}" alt=""></div>
+          <div class="image"><img src="{{ url_for('static', filename='assets/carimage/' + row.model.lower().replace(' ', '') + '.jpg') }}"></div>
           <span class="audi-a">{{row.brand | upper }} {{row.model | upper }}</span>
           <div class="starting-at">
             <span class="starting-at-c">Starting at</span

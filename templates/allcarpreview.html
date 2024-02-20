@@ -31,36 +31,36 @@
               <label for="seating">Seating capacity :</label>
               <select id="seating" name="seating">
                 <option value="">None</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
+                {% for seat in seats%}
+                  <option value="{{seat.seat_capacity}}">{{seat.seat_capacity | upper }}</option>
+                {% endfor %}
               </select>
             </div>
           <div class="col">
             <label for="brand">Brand :</label>
             <select id="brand" name="brand">
               <option value="">None</option>
-              <option value="">Toyota</option>
-              <option value="">Mercedes</option>
-              <option value="KIA">KIA</option>
+              {% for brandd in brands%}
+                  <option value="{{brandd.brand}}">{{brandd.brand | upper }}</option>
+                {% endfor %}
             </select>
           </div>
           <div class="col">
             <label for="color">Color :</label>
             <select id="color" name="color">
               <option value="">None</option>
-              <option value="">4</option>
-              <option value="">5</option>
-              <option value="">6</option>
+              {% for color in colours%}
+                  <option value="{{color.colours}}">{{color.colours | upper }}</option>
+                {% endfor %}
             </select>
           </div>
           <div class="col">
             <label for="fuel">Fuel :</label>
             <select id="fuel" name="fuel">
               <option value="">None</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
+              {% for fuel in fuels%}
+              <option value="{{fuel.fuel}}">{{fuel.fuel | upper }}</option>
+            {% endfor %}
             </select>
           </div>
           

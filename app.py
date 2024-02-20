@@ -97,7 +97,7 @@ def excel_file_import():
         mileage = str(row['mileage']).split()[0]
         price = str(row['price']).replace(' ','')
         boot_spac=str(row['bootspace']).split()[0]
-        seat_capacity = str(row['seat_capacity']).split()[0]
+        seat_capacity = str(row['seating_capacity']).split()[0]
         # Create a new datas object
         data = datas(
             brand=row['brand'],
@@ -105,20 +105,20 @@ def excel_file_import():
             year=row['year'],
             price=price,
             type=str(row['type']).split()[0],
-            colours=row['colours'],
-            fuel=row['fuel'],
+            colours=str(row['colors']).split()[0],
+            fuel=row['feul'],
             mileage=mileage,
             boot_space=boot_spac,
             seat_capacity=seat_capacity,
-            tyre_size=row['tyre_size'],
-            air_bags=str(row['air_bags']),
-            cruise_ctrl=str(row['cruise_ctrl']),
+            tyre_size=str(row['tyresize']).replace(' ',''),
+            air_bags=str(row['airbags']),
+            cruise_ctrl=str(row['cruisectrl']),
             engine=str(row['engine']).split()[0],
             cylinders=str(row['cylinders']).split()[0],
-            transmission=str(row['transmission']).split()[0],
-            gear_box=str(row['gear_box']).split()[0],
-            drive_type=str(row['drive_type ']).split()[0],
-            description=row['description']
+            transmission=str(row['transmission ']).split()[0],
+            gear_box=str(row['gearbox']).split()[0],
+            drive_type=str(row['drivetype']),
+            description=str(row['description'])
         )
         
         db.session.add(data)
@@ -179,9 +179,13 @@ def filter():
             query = query.filter(datas.colours == color)
         if fuel != "":
             query = query.filter(datas.fuel == fuel)
-
+        unique_brands = db.session.query(datas.brand).distinct().all()
+        unique_seats = db.session.query(datas.seat_capacity).distinct().all()
+        unique_colors = db.session.query(datas.colours).distinct().all()
+        unique_fuel = db.session.query(datas.fuel).distinct().all()
         results = query.all()
-        return render_template('allcarpreview.html', rows=results, fun='all')
+        return render_template('allcarpreview.html', rows=results, fun='all',brands = unique_brands,colours = unique_colors,fuels = unique_fuel,seats = unique_seats)
+
 
     return "Method not allowed", 405  # Return method not allowed if not POST request
 
@@ -235,8 +239,34 @@ def wishlist():
 
 @app.route('/allcars')
 def all():
+    unique_brands = db.session.query(datas.brand).distinct().all()
+    unique_seats = db.session.query(datas.seat_capacity).distinct().all()
+    unique_colors = db.session.query(datas.colours).distinct().all()
+    unique_fuel = db.session.query(datas.fuel).distinct().all()
     row = datas.query.all()
-    return render_template('allcarpreview.html',rows= row,fun = 'all')
+    return render_template('allcarpreview.html',rows= row,fun = 'all',brands = unique_brands,colours = unique_colors,fuels = unique_fuel,seats = unique_seats)
+
+
+@app.route('/hatchback')
+def hatchback():
+    row = datas.query.filter(datas.type == 'hatchback').all()
+    unique_brands = db.session.query(datas.brand).distinct().all()
+    unique_seats = db.session.query(datas.seat_capacity).distinct().all()
+    unique_colors = db.session.query(datas.colours).distinct().all()
+    unique_fuel = db.session.query(datas.fuel).distinct().all()
+    return render_template('allcarpreview.html',rows= row,fun = 'all',brands = unique_brands,colours = unique_colors,fuels = unique_fuel,seats = unique_seats)
+
+@app.route('/sedan')
+def sedan():
+    row = datas.query.filter(datas.type == 'sedan').all()
+    unique_brands = db.session.query(datas.brand).distinct().all()
+    unique_seats = db.session.query(datas.seat_capacity).distinct().all()
+    unique_colors = db.session.query(datas.colours).distinct().all()
+    unique_fuel = db.session.query(datas.fuel).distinct().all()
+    return render_template('allcarpreview.html',rows= row,fun = 'all',brands = unique_brands,colours = unique_colors,fuels = unique_fuel,seats = unique_seats)
+
+
+
 
 if __name__ == '__main__':
     with app.app_context():

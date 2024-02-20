@@ -648,9 +648,17 @@ a#brand:hover{
   background-color: #000;
   color: #fff;
   padding: 11px;
-  width: 300px;
+  width: 330px;
 }
-
+.row button{
+  border-radius: 11px;
+  background-color: #000;
+  color: #fff;
+}
+.row button:hover{
+  background-color: #FFF;
+  color: #000;
+}
 
 .the-freedom-d {
   display: flex;
