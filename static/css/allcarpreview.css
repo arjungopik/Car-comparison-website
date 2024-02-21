@@ -414,7 +414,7 @@ button {
   position: relative;
   width: 457.063px;
   height: 71.022px;
-  margin: 147.772px 0 100px 0;
+  margin: 147.772px 0 50px 0;
   color: #000000;
   font-family: Poppins, var(--default-font-family);
   font-size: 16px;
@@ -635,11 +635,21 @@ a#brand:hover{
   font-size: 0px;
   z-index: 21;
 }
-.row{
+.row#filter{
   display: flex;
   justify-content:space-evenly;
   z-index: 100px;
   padding-top: 111px;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.row#recomm{
+  display: flex;
+  justify-content:space-evenly;
+  gap: 31px;
+  z-index: 100px;
   font-family: Poppins, var(--default-font-family);
   font-size: 16px;
   font-weight: 400;

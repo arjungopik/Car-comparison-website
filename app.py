@@ -2,6 +2,7 @@ from openpyxl import load_workbook, Workbook
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import pandas as pd
+import random
 
 # Read the Excel file
 
@@ -47,6 +48,7 @@ class datas(db.Model):
     gear_box = db.Column(db.String)
     drive_type = db.Column(db.String)
     description = db.Column(db.String)
+    recommentation = db.Column(db.String)
 
         
 
@@ -118,7 +120,8 @@ def excel_file_import():
             transmission=str(row['transmission ']).split()[0],
             gear_box=str(row['gearbox']).split()[0],
             drive_type=str(row['drivetype']),
-            description=str(row['description'])
+            description=str(row['description']),
+            recommentation= str(random.randint(80, 100))
         )
         
         db.session.add(data)
