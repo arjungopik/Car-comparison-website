@@ -15,6 +15,7 @@
 
 <body>
     <div class="homoe">
+
         <section class="reviews-box">
 
             <div class="wrapper">
@@ -64,13 +65,75 @@
                         <h3>Learn More</h3>
                     </div>
                 </div>
-                <img src="{{ url_for('static',filename='assets/images/xlightershadow1632885262000-4@2x.png' ) }}" alt="">
+                <img src="{{ url_for('static',filename='assets/images/back.jpg' ) }}"
+                    alt="">
                 <div class="foot">
-                    <h4> ORDER NOW FROM  0-89074017</h4>
-        
+                    <h4> ORDER NOW FROM 0-89074017</h4>
+
                 </div>
             </header>
+            <div class="popup">
+                <div class="popup-content" id="popup-content">
+                    <h3>
+                        What kind of car you are looking for?
+                    </h3>
+                    <div class="close">
+                        <img src="{{ url_for('static',filename='assets/images/delete.png') }}" alt="">
+                    </div>
+
+                    <form action="/filter" method="POST">
+
+                        <div class="row">
+                            <label for="brand">Brand:</label>
+                            <select id="brand" name="brand">
+                                <option value="">Select a brand</option>
+                                {% for brandd in brands%}
+                                <option value="{{brandd.brand}}">{{brandd.brand | upper }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <label for="fuel-type">Fuel type:</label>
+                            <select id="fuel-type" name="fuel">
+                                <option value="">Select a fuel type</option>
+                                {% for fuel in fuels%}
+                                <option value="{{fuel.fuel}}">{{fuel.fuel | upper }}</option>
+                                {% endfor %}
+                            </select>
+
+                        </div>
+                        <div class="row">
+                            <label for="seater">Seater:</label>
+                            <select id="seater" name="seating">
+                                <option value="">Select a seater</option>
+                                {% for seat in seats%}
+                                <option value="{{seat.seat_capacity}}">{{seat.seat_capacity | upper }}</option>
+                                {% endfor %}
+                            </select>
+
+                        </div>
+
+
+                        <div class="row">
+                            <button type="submit">Find my car</button>
+                        </div>
+
+                    </form>
+                </div>
+                <script>
+                    setTimeout(function () {
+                        document.getElementById('popup-content').style.display = 'block';
+                    }, 2000); // 120000 milliseconds = 2 minutes
+                    document.querySelector(".close").addEventListener('click',function(){
+                        document.getElementById('popup-content').style.display = 'none';
+                    })
+                
+                </script>
+
+            </div>
         </section>
+
         <section class="frame-audi-models">
             <div class="frame-audi-models1">
                 <img class="why-do-fans-love-bikes" loading="eager" alt=""
@@ -254,43 +317,43 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <div class="from-label-parent">
                     <div class="from-label">
                         <div class="review-text">
                             <a href="/audicars">
-                            <div class="see-all">See all</div>
-                            <img class="review-text-child" loading="eager" alt=""
-                                src="{{ url_for('static',filename='assets/images/group-3684.svg' ) }}" />
+                                <div class="see-all">See all</div>
+                                <img class="review-text-child" loading="eager" alt=""
+                                    src="{{ url_for('static',filename='assets/images/group-3684.svg' ) }}" />
                             </a>
                         </div>
                     </div>
                     <a href="preview/56">
-                    <img class="xlightershadow-1632885262000-6-icon" loading="eager" alt=""
-                        src="{{ url_for('static',filename='assets/images/xlightershadow1632885262000-6@2x.png' ) }}" />
+                        <img class="xlightershadow-1632885262000-6-icon" loading="eager" alt=""
+                            src="{{ url_for('static',filename='assets/images/xlightershadow1632885262000-6@2x.png' ) }}" />
 
-                    <div class="see-all-button">
-                        <div class="audi-a8l-parent">
-                            <h3 class="audi-a8l">Audi A8L</h3>
-                            <div class="jeff-ellis">
-                                <div class="impressed-quality">
-                                    <img class="read-more-button" alt=""
-                                        src="{{ url_for('static',filename='assets/images/i-recently-purchased-products.svg' ) }}" />
+                        <div class="see-all-button">
+                            <div class="audi-a8l-parent">
+                                <h3 class="audi-a8l">Audi A8L</h3>
+                                <div class="jeff-ellis">
+                                    <div class="impressed-quality">
+                                        <img class="read-more-button" alt=""
+                                            src="{{ url_for('static',filename='assets/images/i-recently-purchased-products.svg' ) }}" />
 
-                                    <img class="read-more-button1" alt=""
-                                        src="{{ url_for('static',filename='assets/images/marie-j-m-review.svg' ) }}" />
+                                        <img class="read-more-button1" alt=""
+                                            src="{{ url_for('static',filename='assets/images/marie-j-m-review.svg' ) }}" />
 
-                                    <img class="read-more-button2" alt=""
-                                        src="{{ url_for('static',filename='assets/images/marie-j-m-review.svg' ) }}" />
+                                        <img class="read-more-button2" alt=""
+                                            src="{{ url_for('static',filename='assets/images/marie-j-m-review.svg' ) }}" />
+                                    </div>
+                                    <div class="reviews4">247 Reviews</div>
                                 </div>
-                                <div class="reviews4">247 Reviews</div>
+                                <div class="fits-most-riders4">
+                                    Fits most riders 5’2" – 6’3"
+                                </div>
+                                <b class="from-12982">From $1,298</b>
                             </div>
-                            <div class="fits-most-riders4">
-                                Fits most riders 5’2" – 6’3"
-                            </div>
-                            <b class="from-12982">From $1,298</b>
                         </div>
-                    </div>
                 </div>
                 </a>
             </div>
@@ -377,7 +440,7 @@
                                         </div>
                                         <div class="jeff-ellis-review1">
                                             <b class="from-1298">From 68.25 lakh</b>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -466,43 +529,43 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <div class="from-label-parent">
-                    <div class="from-label">    
+                    <div class="from-label">
                         <a href="/volvocars">
-                        <div class="review-text">
-                            <div class="see-all">See all</div>
-                            <img class="review-text-child" loading="eager" alt=""
-                                src="{{ url_for('static',filename='assets/images/group-3684.svg' ) }}" />
-                        </div>
-                    </a>
+                            <div class="review-text">
+                                <div class="see-all">See all</div>
+                                <img class="review-text-child" loading="eager" alt=""
+                                    src="{{ url_for('static',filename='assets/images/group-3684.svg' ) }}" />
+                            </div>
+                        </a>
                     </div>
                     <a href="preview/69">
-                    <img class="xlightershadow-1632885262000-6-icon" loading="eager" alt=""
-                        src="{{ url_for('static',filename='assets/images/volvoc40.jpg' ) }}" />
+                        <img class="xlightershadow-1632885262000-6-icon" loading="eager" alt=""
+                            src="{{ url_for('static',filename='assets/images/volvoc40.jpg' ) }}" />
 
-                    <div class="see-all-button">
-                        <div class="audi-a8l-parent">
-                            <h3 class="audi-a8l">Volvo C40 RECHARGE</h3>
-                            <div class="jeff-ellis">
-                                <div class="impressed-quality">
-                                    <img class="read-more-button" alt=""
-                                        src="{{ url_for('static',filename='assets/images/i-recently-purchased-products.svg' ) }}" />
+                        <div class="see-all-button">
+                            <div class="audi-a8l-parent">
+                                <h3 class="audi-a8l">Volvo C40 RECHARGE</h3>
+                                <div class="jeff-ellis">
+                                    <div class="impressed-quality">
+                                        <img class="read-more-button" alt=""
+                                            src="{{ url_for('static',filename='assets/images/i-recently-purchased-products.svg' ) }}" />
 
-                                    <img class="read-more-button1" alt=""
-                                        src="{{ url_for('static',filename='assets/images/marie-j-m-review.svg' ) }}" />
+                                        <img class="read-more-button1" alt=""
+                                            src="{{ url_for('static',filename='assets/images/marie-j-m-review.svg' ) }}" />
 
-                                    <img class="read-more-button2" alt=""
-                                        src="{{ url_for('static',filename='assets/images/marie-j-m-review.svg' ) }}" />
+                                        <img class="read-more-button2" alt=""
+                                            src="{{ url_for('static',filename='assets/images/marie-j-m-review.svg' ) }}" />
+                                    </div>
+                                    <div class="reviews4">247 Reviews</div>
                                 </div>
-                                <div class="reviews4">247 Reviews</div>
+                                <div class="fits-most-riders4">
+                                    Fits most riders 5’2" – 6’3"
+                                </div>
+                                <b class="from-12982">From 62.95 lakhs</b>
                             </div>
-                            <div class="fits-most-riders4">
-                                Fits most riders 5’2" – 6’3"
-                            </div>
-                            <b class="from-12982">From 62.95 lakhs</b>
                         </div>
-                    </div>
                 </div>
                 </a>
             </div>
@@ -511,7 +574,7 @@
 
 
 
-         <section class="jeff-ellis-review">
+        <section class="jeff-ellis-review">
             <div class="impressed-quality-group">
                 <div class="impressed-quality-group1">
                     <div class="read-more-link">
@@ -678,43 +741,43 @@
                         </div>
                     </div>
                 </a>
-               
+
                 <div class="from-label-parent">
                     <div class="from-label">
                         <a href="/allcars">
-                        <div class="review-text">
-                            <div class="see-all">See all</div>
-                            <img class="review-text-child" loading="eager" alt=""
-                                src="{{ url_for('static',filename='assets/images/group-3684.svg' ) }}" />
-                        </div>
-                    </a>
+                            <div class="review-text">
+                                <div class="see-all">See all</div>
+                                <img class="review-text-child" loading="eager" alt=""
+                                    src="{{ url_for('static',filename='assets/images/group-3684.svg' ) }}" />
+                            </div>
+                        </a>
                     </div>
                     <a href="preview/89">
-                    <img class="xlightershadow-1632885262000-6-icon" loading="eager" alt=""
-                        src="{{ url_for('static',filename='assets/images/vellfare.jpg' ) }}" />
+                        <img class="xlightershadow-1632885262000-6-icon" loading="eager" alt=""
+                            src="{{ url_for('static',filename='assets/images/vellfare.jpg' ) }}" />
 
-                    <div class="see-all-button">
-                        <div class="audi-a8l-parent">
-                            <h3 class="audi-a8l">vell fire</h3>
-                            <div class="jeff-ellis">
-                                <div class="impressed-quality">
-                                    <img class="read-more-button" alt=""
-                                        src="{{ url_for('static',filename='assets/images/i-recently-purchased-products.svg' ) }}" />
+                        <div class="see-all-button">
+                            <div class="audi-a8l-parent">
+                                <h3 class="audi-a8l">vell fire</h3>
+                                <div class="jeff-ellis">
+                                    <div class="impressed-quality">
+                                        <img class="read-more-button" alt=""
+                                            src="{{ url_for('static',filename='assets/images/i-recently-purchased-products.svg' ) }}" />
 
-                                    <img class="read-more-button1" alt=""
-                                        src="{{ url_for('static',filename='assets/images/marie-j-m-review.svg' ) }}" />
+                                        <img class="read-more-button1" alt=""
+                                            src="{{ url_for('static',filename='assets/images/marie-j-m-review.svg' ) }}" />
 
-                                    <img class="read-more-button2" alt=""
-                                        src="{{ url_for('static',filename='assets/images/marie-j-m-review.svg' ) }}" />
+                                        <img class="read-more-button2" alt=""
+                                            src="{{ url_for('static',filename='assets/images/marie-j-m-review.svg' ) }}" />
+                                    </div>
+                                    <div class="reviews4">247 Reviews</div>
                                 </div>
-                                <div class="reviews4">247 Reviews</div>
+                                <div class="fits-most-riders4">
+                                    Fits most riders 5’2" – 6’3"
+                                </div>
+                                <b class="from-12982">From 80.00 lakh</b>
                             </div>
-                            <div class="fits-most-riders4">
-                                Fits most riders 5’2" – 6’3"
-                            </div>
-                            <b class="from-12982">From 80.00 lakh</b>
                         </div>
-                    </div>
                 </div>
                 </a>
             </div>
@@ -726,11 +789,11 @@
             <div class="audi-section"></div>
         </div>
         <div class="homoe-child"></div>
-       
+
         <div class="powered-by-social-media-logos">
             <div class="child-frame-buyer-jane-butler"></div>
         </div>
-        
+
         <div class="why-do-our-fans-love-our-bikes">
             <h1 class="why-do-our">Why do our fans love our bikes?</h1>
         </div>

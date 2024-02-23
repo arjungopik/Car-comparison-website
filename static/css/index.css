@@ -1,3624 +1,4240 @@
 /* Reset box model and set up root variables */
 :root {
-    --dark-color: #ffffff;
-    --light-color: #D9D9D9;
+  --dark-color: #ffffff;
+  --light-color: #D9D9D9;
 }
 
 /* Apply box-sizing to all elements */
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-a{
+a {
   text-decoration: none;
   color: #000;
 
 }
+
 /* Set up body styles */
 body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background: var(--dark-color);
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--dark-color);
 }
 
 /* Set up wrapper max-width and centering */
 .wrapper {
-    max-width: 1865px;
-    margin: 0 auto;
+  max-width: 1865px;
+  margin: 0 auto;
 
 }
 
 /* Header styles */
 nav {
-    margin: 0px;
-    z-index: 100;
-    position: fixed;
-    background-color: #2d282878;
-    display: flex;
-    align-items: center; /* Change to center */
-    justify-content: space-between; /* Add space-between to separate brand and menu */
-    width: 100%; /* Ensure navigation spans the entire width */
-    height: 70px;
-    color: #000 ;
+  margin: 0px;
+  z-index: 100;
+  position: fixed;
+  background-color: #2d282878;
+  display: flex;
+  align-items: center;
+  /* Change to center */
+  justify-content: space-between;
+  /* Add space-between to separate brand and menu */
+  width: 100%;
+  /* Ensure navigation spans the entire width */
+  height: 70px;
+  color: #000;
 }
 
 nav h2 {
-    margin: 0; /* Remove default margin */
+  margin: 0;
+  /* Remove default margin */
 }
 
 nav ul {
-    list-style: none;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    display: flex;
-    align-items: center;
-    gap: 70px; /* Align items vertically */
+  list-style: none;
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
+  /* Remove default padding */
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  /* Align items vertically */
 }
 
 nav ul li {
-    margin-left: 20px; /* Add spacing between menu items */
+  margin-left: 20px;
+  /* Add spacing between menu items */
 }
 
 nav ul li a {
-    color:#000;
-    font-family: Poppins;
-    font-size: 18px;
-    font-weight: 400;
-    text-decoration: none;
+  color: #000;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 nav ul li a:hover {
-    color: #FFF;
+  color: #FFF;
 }
 
 .search input {
-    border-radius: 11px;
-    margin-right: 111px
+  border-radius: 11px;
+  margin-right: 111px
 }
 
 /* header */
-header{
-    width: 100%;
-    position: relative;
-    max-height: 92vh;
-}
-header img{
-    width: 100%;
-   
+header {
+  width: 100%;
+  position: relative;
+  max-height: 92vh;
 }
 
-header .left{
-    position: absolute;
-    top: 25%;
-    left: 10%;
+header img {
+  width: 100%;
+
 }
-header .left h2{
+
+header .left {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+header .left h2 {
   font-size: 52px;
   margin: 0;
 }
 
-header .left h4{
+header .left h4 {
   margin: 0;
 }
-header .left h5{
+
+header .left h5 {
   margin: 0;
 }
-header .left .learnmore{
- background-color: black;
- color: #FFF;
- border-radius: 11px;
- text-align: center;
+
+header .left .learnmore {
+  background-color: black;
+  color: #FFF;
+  border-radius: 11px;
+  text-align: center;
 }
-header .foot{
-    background-color: black;
-    display: flex;
-    color: #FFF;
-    justify-content: space-between;
-    margin-top: 0;
-    padding: 0 30px;
+
+header .foot {
+  background-color: black;
+  display: flex;
+  color: #FFF;
+  justify-content: space-between;
+  margin-top: 0;
+  padding: 0 30px;
 }
+
 .text-input-field-child {
-    height: 45px;
-    width: 1728px;
-    position: relative;
-    background-color: var(--color-gray-400);
-    display: none;
-    max-width: 100%;
-  }
-  .delivered-icon-01-1,
-  .order-now-from {
-    position: relative;
-    flex-shrink: 0;
-    z-index: 1;
-  }
-  .order-now-from {
-    width: 283px;
-    line-height: 13px;
-    display: inline-block;
-  }
-  .delivered-icon-01-1 {
-    height: 29px;
-    width: 34px;
-    overflow: hidden;
-  }
+  height: 45px;
+  width: 1728px;
+  position: relative;
+  background-color: var(--color-gray-400);
+  display: none;
+  max-width: 100%;
+}
+
+.delivered-icon-01-1,
+.order-now-from {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.order-now-from {
+  width: 283px;
+  line-height: 13px;
+  display: inline-block;
+}
+
+.delivered-icon-01-1 {
+  height: 29px;
+  width: 34px;
+  overflow: hidden;
+}
+
+.text-input-field {
+  width: 1728px;
+  margin: 0 !important;
+  position: absolute;
+  right: 72px;
+  bottom: -44px;
+  background-color: var(--color-gray-400);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) 148px;
+  box-sizing: border-box;
+  gap: 894px;
+  max-width: 100%;
+}
+
+.popup {
+  position: absolute;
+
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 5px;
+  left: 35%;
+  top: 200px;
+  border-radius: 11px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+.popup h3{
+    font-size: 31px;
+    background: #000;
+    width: 100%;
+    color: #fff;
+    margin: 0;
+    padding: 20px 0px 11px 0;
+    
+}
+
+.popup-content {
+  width:611px;
+  border: 3px solid #000;
+  border-radius: 11px;
+  display: none;
+  /* Border style, width, and color */
+  padding: 0 0 111px 0px;
+  transition: opacity 0.5s ease;  
+}
+.popup  label{
+  display: block;
+  margin-top: 40px;
+  padding-right: 6px;
+  font-size: 21px;
+  color: #FFF;
+}
+
+.popup  select{
+  padding: 5px;
+  width: 150px;
+  margin-top:40px;
+  border-radius: 11px ;
+}
+
+.popup button {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-left: 71px;
+  margin-top: 20px;
+}
+ .popup .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .popup  .close img{
+  position:absolute;
+  width: 31px;
+  right: 8px;
+  top: 10px;
+  border-radius: 11px;
+}
+.popup .close img:hover {
+box-shadow: 0 0 5px #FFF; /* Apply box shadow on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text-input-field-item {
+  height: 45px;
+  width: 1728px;
+  position: relative;
+  background-color: var(--color-teal-100);
+  display: none;
+  max-width: 100%;
+}
+
+.bike-01-3-icon {
+  width: 25px;
+  height: 16px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.bike-01-3-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-2xs) 0 0;
+}
+
+.final-days-to {
+  margin: 0;
+}
+
+.final-days-to-container {
+  width: 311px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.bike-01-2-icon {
+  align-self: stretch;
+  width: 25px;
+  position: relative;
+  max-height: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 16px;
+  z-index: 1;
+}
+
+.final-days-to-save-700-free-parent {
+  width: 449px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 58px;
+  max-width: 100%;
+}
+
+.free-shipping-absolutely {
+  position: relative;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.facebook-logo {
+  width: 261px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: var(--font-size-base);
+  font-family: var(--font-poppins);
+}
+
+.bike-01-1-icon {
+  height: 16px;
+  width: 25px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.final-days-to1 {
+  margin: 0;
+}
+
+.final-days-to-container1 {
+  flex: 1;
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.bike-01-4-icon {
+  height: 16px;
+  width: 25px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.free-shipping-message,
+.text-input-field1 {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+
+.free-shipping-message {
+  width: 405px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 47px;
+  min-height: 17px;
+}
+
+.text-input-field1 {
+  width: 1728px;
+  margin: 0 !important;
+  position: sticky;
+  top: 0;
+  right: 72px;
+  background-color: var(--color-teal-100);
+  align-items: center;
+  justify-content: center;
+  padding: 10px var(--padding-xl) var(--padding-2xs);
+  box-sizing: border-box;
+  gap: 64px;
+  z-index: 99;
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+
+.rivian-r1t-1-icon {
+  width: 1920px;
+  height: 952px;
+  position: relative;
+  object-fit: cover;
+  display: none;
+  max-width: 100%;
+}
+
+.suvs {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  z-index: 3;
+}
+
+.brand-name {
+  margin: 0 !important;
+  height: 115px;
+  width: 365px;
+  position: absolute;
+  bottom: -80px;
+  left: -361px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: inherit;
+  text-align: center;
+  display: inline-block;
+  z-index: 4;
+}
+
+.frame-reviews-audi-a,
+.star-rating-audi-a-reviews {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.star-rating-audi-a-reviews {
+  flex-direction: row;
+  position: relative;
+}
+
+.frame-reviews-audi-a {
+  flex-direction: column;
+  padding: 0 var(--padding-base) 0 0;
+}
+
+.bikes,
+.electruc,
+.hatchbacks {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  z-index: 3;
+}
+
+.frame-pfbaddacbike {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 83px;
+  max-width: 100%;
+}
+
+.text-impressed-with-quality-au-child {
+  height: 32px;
+  width: 213px;
+  position: relative;
+  border-radius: var(--br-7xl);
+  border: 1px solid var(--color-white);
+  box-sizing: border-box;
+  display: none;
+}
+
+.see-all-audi-a-links {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 4;
+}
+
+.text-impressed-with-quality-au {
+  flex: 1;
+  border-radius: var(--br-7xl);
+  border: 1px solid var(--color-white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--padding-9xs) var(--padding-5xs);
+  z-index: 3;
+}
+
+.frame-audi-a-l-bikes {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 3;
+}
+
+.group-customer-reviews-audi-q {
+  width: 254px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-mid);
+}
+
+.quick-hasslefree-setup-message {
+  width: 1361px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+
+.frame-test-rides-available {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-height: 114px;
+  max-width: 100%;
+}
+
+.experience,
+.freedom {
+  margin: 0;
+}
+
+.enjoy-the-ride,
+.experience-freedom {
+  margin: 0;
+  position: relative;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 3;
+}
+
+.experience-freedom {
+  align-self: stretch;
+  height: 128px;
+  font-size: inherit;
+  line-height: 100.5%;
+  white-space: pre-wrap;
+}
+
+.enjoy-the-ride {
+  width: 872.2px;
+  font-size: var(--font-size-2xl);
+  max-width: 100%;
+}
+
+.text-fits-most-riders-audi-l {
+  width: 963px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-4xs);
+  max-width: 100%;
+  font-size: 64px;
+}
+
+.as-low-as,
+.payment-plans-available {
+  align-self: stretch;
+  position: relative;
+  z-index: 3;
+}
+
+.as-low-as {
+  font-weight: 500;
+  z-index: 4;
+}
+
+.frame-jane-butler-review {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.frame-i-recently-purchased-som {
+  width: 350px;
+  border: 0;
+  outline: 0;
+  background-color: var(--color-black);
+  height: 42px;
+  border-radius: var(--br-7xl);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-4xs);
+  box-sizing: border-box;
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  max-width: 100%;
+  z-index: 3;
+}
+
+.text-love-my-first-electric-bi {
+  width: 708px;
+  flex-direction: column;
+  gap: var(--gap-4xs);
+  font-size: var(--font-size-base);
+}
+
+.audi-a-bike-model,
+.text-frame-i-recently-purchase,
+.text-love-my-first-electric-bi {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.text-frame-i-recently-purchase {
+  flex: 1;
+  flex-direction: column;
+  padding: 265px 108px 131px 268px;
+  box-sizing: border-box;
+  gap: 87px;
+  background-image: url(./public/2022rivianr1t-1@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 2;
+  font-size: var(--font-size-xs);
+}
+
+.audi-a-bike-model {
+  align-self: stretch;
+  flex-direction: row;
+  position: relative;
+}
+
+.group-reviews {
+  width: 1920px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 104%;
+  flex-shrink: 0;
+}
+
+.reviews-box,
+.star-rating {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.star-rating {
+  width: 1848px;
+  justify-content: flex-start;
+  max-width: 107%;
+  flex-shrink: 0;
+}
+
+.reviews-box {
+  align-self: stretch;
+  height: 812px;
+  justify-content: flex-end;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  font-family: var(--font-poppins);
+}
+
+.frame-not-satisfied-weve-got-e {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-teal-100);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.text-free-shipping-on-all-ebik-child {
+  position: absolute;
+  top: 25px;
+  left: 9px;
+  width: 30px;
+  height: 22.1px;
+  z-index: 1;
+}
+
+.text-free-shipping-on-all-ebik {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  height: 49px;
+  width: 49px;
+  position: absolute;
+  margin: 0 !important;
+  top: -13px;
+  right: 33px;
+}
+
+.join-the-ride,
+.view-more {
+  position: relative;
+  display: inline-block;
+}
+
+.join-the-ride {
+  margin: 0;
+  height: 54px;
+  width: 524px;
+  font-size: inherit;
+  font-weight: 500;
+  font-family: inherit;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.view-more {
+  height: 24px;
+  font-size: var(--font-size-base);
+  color: var(--color-teal-100);
+  white-space: pre-wrap;
+}
+
+.star-reviews-audi {
+  width: 1575px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 var(--padding-xl) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+
+.frame-quick-hasslefree-setup,
+.frame-set-audi-bikes {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.frame-set-audi-bikes {
+  flex: 1;
+  min-height: 68px;
+}
+
+.frame-quick-hasslefree-setup {
+  width: 1682px;
+  padding: 0 0 0 var(--padding-xl);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.why-do-fans-love-bikes {
+  height: 99px;
+  width: 13px;
+  position: relative;
+}
+
+.mask-group-icon,
+.mask-group-icon1,
+.mask-group-icon2 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  min-width: 297px;
+  min-height: 600px;
+}
+
+.mask-group-icon2 {
+  object-fit: contain;
+}
+
+.frame-audi-models,
+.frame-audi-models1 {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.frame-audi-models1 {
+  width: 1498px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-2xl) 0 0;
+  gap: 31px;
+}
+
+.frame-audi-models {
+  align-self: stretch;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-lg);
+  min-height: 690px;
+}
+
+.read-more {
+  position: relative;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-teal-200);
+  display: none;
+}
+
+.the-full-line {
+  margin: 0;
+  width: 586px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  padding-right: var(--padding-xl);
+}
+
+.a-variety-of {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  z-index: 1;
+  margin-top: -2px;
+}
+
+.read-more-link {
+  width: 394px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.xlightershadow-1632885262000-1-icon {
+  align-self: stretch;
+  height: 197px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.audi-a1 {
+  margin: 0;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.customer-testimonials1 {
+  width: 113px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-6xs);
+  box-sizing: border-box;
+  font-size: var(--font-size-2xl);
+}
+
+.marie-j-m-review,
+.super-friendly-people {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.i-recently-purchased-products,
+.pfbaddacbike-node-icon,
+.test-rides-available-frame {
+  height: 15px;
+  width: 16px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.pfbaddacbike-node-icon,
+.test-rides-available-frame {
+  width: 15px;
+}
+
+.powered-by-logo-group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+
+.reviews {
+  position: relative;
+  font-weight: 500;
+}
+
+.read-more-link1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+
+.fits-most-riders {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-dimgray-200);
+}
+
+.from-1098 {
+  height: 36px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+  color: var(--color-teal-200);
+}
+
+.customer-testimonials,
+.frame-powered-by {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.customer-testimonials {
+  padding: 0 var(--padding-xl) 0 0;
+  gap: var(--gap-6xs);
+}
+
+.frame-powered-by {
+  flex: 1;
+  gap: var(--gap-smi);
+  min-width: 216px;
+  max-width: 100%;
+}
+
+.xlightershadow-1632885262000-5-icon {
+  align-self: stretch;
+  height: 197px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.audi-a4 {
+  margin: 0;
+  height: 32px;
+  position: relative;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+}
+
+.frame-group-audi-reviews,
+.see-all-link,
+.star-rating-icon,
+.text-from-audi-q,
+.xlightershadow-rectangle-icon {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.see-all-link,
+.text-from-audi-q,
+.xlightershadow-rectangle-icon {
+  width: 16px;
+}
+
+.see-all-link,
+.xlightershadow-rectangle-icon {
+  width: 15px;
+}
+
+.frame-set-audi-bikes1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+
+.reviews1 {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.test-ride-available-frame {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+
+.fits-most-riders1 {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-dimgray-200);
+}
+
+.from-1298 {
+  height: 36px;
+  position: relative;
+  display: inline-block;
+}
+
+.impressed-with-quality {
+  position: relative;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-black);
+  white-space: nowrap;
+}
+
+.jeff-ellis-review1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+  font-size: var(--font-size-5xl);
+  color: var(--color-teal-200);
+}
+
+.audi-a4-parent,
+.frame-powered-by-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.audi-a4-parent {
+  flex-direction: column;
+  gap: var(--gap-5xs);
+}
+
+.frame-powered-by-inner {
+  flex-direction: row;
+  padding: 0 var(--padding-20xl) 0 0;
+}
+
+.frame-powered-by1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-smi);
+  min-width: 216px;
+  max-width: 100%;
+}
+
+.impressed-quality-group1,
+.love-first-electric-bike {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+  margin-right: 0;
+}
+
+.love-first-electric-bike {
+  align-self: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-15xl);
+  font-size: var(--font-size-sm);
+}
+
+.impressed-quality-group1 {
+  width: 625px;
+  flex-shrink: 0;
+  flex-direction: column;
+  padding: 0 var(--padding-9xs) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-smi);
+}
+
+.xlightershadow-1632885262000-3-icon {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.audi-a5 {
+  margin: 0;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.review-card-a {
+  width: 116px;
+  height: 34px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-5xs);
+  box-sizing: border-box;
+}
+
+.audi-frame-a,
+.audi-frame-a1,
+.audi-frame-a2,
+.audi-frame-a3,
+.audi-frame-a4 {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.audi-frame-a2,
+.audi-frame-a3,
+.audi-frame-a4 {
+  width: 16px;
+}
+
+.audi-frame-a3,
+.audi-frame-a4 {
+  width: 15px;
+}
+
+.group-a {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+
+.reviews2 {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.see-all-button-a {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-2xl);
+}
+
+.fits-most-riders2 {
+  position: relative;
+  font-weight: 500;
+}
+
+.frame-b,
+.star-rating-a {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.star-rating-a {
+  flex-direction: row;
+  padding: 0 var(--padding-10xs);
+  color: var(--color-dimgray-200);
+}
+
+.frame-b {
+  align-self: stretch;
+  flex-direction: column;
+  gap: var(--gap-5xs);
+  font-size: var(--font-size-sm);
+}
+
+.from-1198 {
+  height: 36px;
+  position: relative;
+  display: inline-block;
+}
+
+.read-more-link-a {
+  flex-direction: row;
+  padding: 0 var(--padding-10xs);
+  font-size: var(--font-size-5xl);
+  color: var(--color-teal-200);
+}
+
+.frame-set-a,
+.read-more-link-a,
+.rectangle-a,
+.star-a {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+}
+
+.star-a {
+  width: 231px;
+  flex-direction: column;
+  padding: 0 var(--padding-xl) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-6xs);
+}
+
+.frame-set-a,
+.rectangle-a {
+  width: 252px;
+  flex-direction: row;
+}
+
+.frame-set-a {
+  height: 346px;
+  width: 341px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-smi);
+  font-size: var(--font-size-2xl);
+}
+
+.xlightershadow-1632885262000-4-icon {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.audi-q3 {
+  margin: 0;
+  height: 32px;
+  position: relative;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+}
+
+.reviews-container-icon,
+.reviews-container-icon1 {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.reviews-container-icon2,
+.reviews-container-icon3,
+.reviews-container-icon4 {
+  height: 15px;
+  width: 16px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.reviews-container-icon3,
+.reviews-container-icon4 {
+  width: 15px;
+}
+
+.frame-set {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+
+.reviews3 {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.not-satisfied-section-a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+
+.fits-most-riders3 {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-dimgray-200);
+}
+
+.from-12981 {
+  height: 36px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+  color: var(--color-teal-200);
+}
+
+.first-electric-bike-a,
+.frame-c,
+.impressed-section-a {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.first-electric-bike-a {
+  flex-direction: column;
+  padding: 0 var(--padding-xl) 0 0;
+  gap: var(--gap-5xs);
+}
+
+.frame-c,
+.impressed-section-a {
+  width: 249px;
+  flex-direction: row;
+}
+
+.frame-c {
+  height: 347px;
+  width: 335px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-mini);
+  font-size: var(--font-size-sm);
+}
+
+.see-all {
+  height: 24px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.review-text-child {
+  height: 31.7px;
+  width: 31.7px;
+  position: relative;
+}
+
+.from-label,
+.review-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.review-text {
+  align-items: center;
+  padding: 0 var(--padding-xl) 0 0;
+  gap: var(--gap-6xl);
+}
+
+.from-label {
+  width: 159px;
+  height: 40px;
+  align-items: flex-start;
+}
+
+.xlightershadow-1632885262000-6-icon {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.audi-a8l {
+  margin: 0;
+  height: 32px;
+  position: relative;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+}
+
+.read-more-button,
+.read-more-button1,
+.read-more-button2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-12xs);
+  width: 16px;
+  height: 15px;
+}
+
+.read-more-button1,
+.read-more-button2 {
+  left: 23px;
+  width: 15px;
+}
+
+.read-more-button2 {
+  left: 45px;
+}
+
+.impressed-quality {
+  height: 15px;
+  width: 60px;
+  position: relative;
+}
+
+.reviews4 {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.jeff-ellis {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+
+.fits-most-riders4 {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-dimgray-200);
+}
+
+.from-12982 {
+  height: 36px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+  color: var(--color-teal-200);
+}
+
+.audi-a8l-parent,
+.from-label-parent,
+.see-all-button {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.audi-a8l-parent {
+  flex-direction: column;
+  padding: 0 var(--padding-xl) 0 0;
+  gap: var(--gap-5xs);
+}
+
+.from-label-parent,
+.see-all-button {
+  width: 249px;
+  flex-direction: row;
+  font-size: var(--font-size-sm);
+}
+
+.from-label-parent {
+  height: 402px;
+  width: 335px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-mini);
+  font-size: var(--font-size-base);
+}
+
+.impressed-quality-group,
+.jeff-ellis-review {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.impressed-quality-group {
+  width: 1673px;
+  overflow: hidden;
+  flex-shrink: 0;
+  align-items: flex-end;
+  gap: var(--gap-6xl);
+}
+
+.jeff-ellis-review {
+  align-items: flex-start;
+  padding: 0 0 0 var(--padding-xl);
+  box-sizing: border-box;
+  min-height: 438px;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+
+.audi-section {
+  height: 1px;
+  flex: 1;
+  position: relative;
+  background-color: var(--color-gray-100);
+  max-width: 100%;
+}
+
+.test-rides-available {
+  align-self: stretch;
+  height: 11px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 0 var(--padding-4xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.homoe-child {
+  align-self: stretch;
+  position: relative;
+  background-color: var(--color-gray-400);
+  height: 78px;
+  display: none;
+  z-index: 8;
+}
+
+.the-full-line1 {
+  margin: 0;
+  width: 686px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  padding-right: var(--padding-xl);
+}
+
+.a-variety-of1 {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  z-index: 1;
+  margin-top: -2px;
+}
+
+.star-rating1 {
+  width: 394px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.xlightershadow-1632885262000-7-icon {
+  align-self: stretch;
+  height: 197px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.audi-a11 {
+  margin: 0;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.see-all-button1 {
+  width: 113px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-6xs);
+  box-sizing: border-box;
+  font-size: var(--font-size-2xl);
+}
+
+.group-icon,
+.impressed-quality-frame,
+.jeff-ellis-text-verified-buyer,
+.text-quality-impressed-frame {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.group-icon,
+.jeff-ellis-text-verified-buyer,
+.text-quality-impressed-frame {
+  width: 16px;
+}
+
+.group-icon,
+.text-quality-impressed-frame {
+  width: 15px;
+}
+
+.frame-audi-a-l {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+
+.reviews5 {
+  position: relative;
+  font-weight: 500;
+}
+
+.from-text-audi-q,
+.see-all-frame-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.see-all-frame-group {
+  flex: 1;
+  align-items: center;
+  gap: var(--gap-xl);
+}
+
+.from-text-audi-q {
+  align-self: stretch;
+  align-items: flex-start;
+  padding: 0 0 0 var(--padding-xl);
+}
+
+.fits-most-riders5 {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-dimgray-200);
+}
+
+.from-10981 {
+  height: 36px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+  color: var(--color-teal-200);
+}
+
+.review-text1,
+.xlightershadow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.review-text1 {
+  width: 225px;
+  padding: 0 var(--padding-xl) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-6xs);
+}
+
+.xlightershadow {
+  flex: 1;
+  gap: var(--gap-smi);
+  min-width: 216px;
+  max-width: 100%;
+}
+
+.xlightershadow-1632885262000-8-icon {
+  align-self: stretch;
+  height: 197px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.audi-a41 {
+  margin: 0;
+  height: 32px;
+  position: relative;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+}
+
+.frame-with-star-rating,
+.pfaceaeopenbox-icon,
+.pfaddaceatruck-icon,
+.pfddaceabox-icon,
+.quick-setup-icon {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.pfaceaeopenbox-icon,
+.pfddaceabox-icon,
+.quick-setup-icon {
+  width: 16px;
+}
+
+.pfaceaeopenbox-icon,
+.quick-setup-icon {
+  width: 15px;
+}
+
+.audi-frame {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+
+.reviews6 {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.powered-by-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+
+.fits-most-riders6 {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-dimgray-200);
+}
+
+.from-12983 {
+  height: 36px;
+  position: relative;
+  display: inline-block;
+}
+
+.frame-reviews {
+  position: relative;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-black);
+  white-space: nowrap;
+}
+
+.xlightershadow-rectangle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+  font-size: var(--font-size-5xl);
+  color: var(--color-teal-200);
+}
+
+.audi-a4-group,
+.xlightershadow-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.audi-a4-group {
+  flex-direction: column;
+  gap: var(--gap-5xs);
+}
+
+.xlightershadow-inner {
+  flex-direction: row;
+  padding: 0 var(--padding-20xl) 0 0;
+}
+
+.frame-with-shadow,
+.from-text,
+.xlightershadow1 {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.xlightershadow1 {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-smi);
+  min-width: 216px;
+}
+
+.frame-with-shadow,
+.from-text {
+  align-items: flex-start;
+}
+
+.frame-with-shadow {
+  align-self: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-15xl);
+  font-size: var(--font-size-sm);
+}
+
+.from-text {
+  width: 704px;
+  flex-shrink: 0;
+  flex-direction: column;
+  padding: 0 var(--padding-9xs) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-smi);
+}
+
+.xlightershadow-1632885262000-9-icon {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.audi-a51 {
+  margin: 0;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.quick-hasslefree-setup-frame {
+  width: 116px;
+  height: 34px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-5xs);
+  box-sizing: border-box;
+}
+
+.star-rating-audi,
+.star-rating-audi1,
+.star-rating-audi2,
+.star-rating-audi3,
+.star-rating-audi4 {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.star-rating-audi2,
+.star-rating-audi3,
+.star-rating-audi4 {
+  width: 16px;
+}
+
+.star-rating-audi3,
+.star-rating-audi4 {
+  width: 15px;
+}
+
+.audi-reviews-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+
+.reviews7 {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.frame-set-audi-bikes2 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-2xl);
+}
+
+.fits-most-riders7 {
+  position: relative;
+  font-weight: 500;
+}
+
+.frame-love-my-first-electric-b,
+.reviews-container-left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.reviews-container-left {
+  flex-direction: row;
+  padding: 0 var(--padding-10xs);
+  color: var(--color-dimgray-200);
+}
+
+.frame-love-my-first-electric-b {
+  align-self: stretch;
+  flex-direction: column;
+  gap: var(--gap-5xs);
+  font-size: var(--font-size-sm);
+}
+
+.from-11981 {
+  height: 36px;
+  position: relative;
+  display: inline-block;
+}
+
+.audi-bike-frame,
+.test-rides-available-frame1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.audi-bike-frame {
+  flex-direction: row;
+  padding: 0 var(--padding-10xs);
+  font-size: var(--font-size-5xl);
+  color: var(--color-teal-200);
+}
+
+.test-rides-available-frame1 {
+  width: 231px;
+  flex-direction: column;
+  padding: 0 var(--padding-xl) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-6xs);
+}
+
+.i-recently-purchased-text,
+.jane-butler-text-verified-buye {
+  width: 252px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.jane-butler-text-verified-buye {
+  height: 346px;
+  width: 341px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-smi);
+  font-size: var(--font-size-2xl);
+}
+
+.xlightershadow-1632885262000-1-icon1 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.audi-q31 {
+  margin: 0;
+  height: 32px;
+  position: relative;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+}
+
+.facebook-reviews-container,
+.facebook-reviews-container1 {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.facebook-reviews-container2,
+.facebook-reviews-container3,
+.facebook-reviews-container4 {
+  height: 15px;
+  width: 16px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.facebook-reviews-container3,
+.facebook-reviews-container4 {
+  width: 15px;
+}
+
+.first-electric-bike-review {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+
+.reviews8 {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.jeff-ellis-review2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+
+.fits-most-riders8 {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-dimgray-200);
+}
+
+.from-12984 {
+  height: 36px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+  color: var(--color-teal-200);
+}
+
+.audi-a-l-reviews-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xl) 0 0;
+  gap: var(--gap-5xs);
+}
+
+.from-label-frame,
+.quality-impressed-group {
+  width: 249px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.from-label-frame {
+  height: 347px;
+  width: 335px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-mini);
+  font-size: var(--font-size-sm);
+}
+
+.see-all1 {
+  height: 24px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.parent-frame-audi-bikes-child {
+  height: 31.7px;
+  width: 31.7px;
+  position: relative;
+}
+
+.parent-frame-audi-bikes,
+.pfaddaceatruck-free-shipping {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.parent-frame-audi-bikes {
+  align-items: center;
+  padding: 0 var(--padding-xl) 0 0;
+  gap: var(--gap-6xl);
+}
+
+.pfaddaceatruck-free-shipping {
+  width: 159px;
+  height: 40px;
+  align-items: flex-start;
+}
+
+.xlightershadow-1632885262000-1-icon2 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.audi-a8l1 {
+  margin: 0;
+  height: 32px;
+  position: relative;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+}
+
+.frame-with-frame-children,
+.frame-with-frame-children1,
+.frame-with-frame-children2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-12xs);
+  width: 16px;
+  height: 15px;
+}
+
+.frame-with-frame-children1,
+.frame-with-frame-children2 {
+  left: 23px;
+  width: 15px;
+}
+
+.frame-with-frame-children2 {
+  left: 45px;
+}
+
+.xlightershadow-rectangle1 {
+  height: 15px;
+  width: 60px;
+  position: relative;
+}
+
+.reviews9 {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.child-frame-car-model-q {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+
+.fits-most-riders10 {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-dimgray-200);
+}
+
+.from-12985 {
+  height: 36px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+  color: var(--color-teal-200);
+}
+
+.why-do-fans-love-bikes1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xl) 0 0;
+  gap: var(--gap-5xs);
+}
+
+.capax-powered-by,
+.fits-most-riders9 {
+  width: 249px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: var(--font-size-sm);
+}
+
+.capax-powered-by {
+  height: 402px;
+  width: 335px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-mini);
+  font-size: var(--font-size-base);
+}
+
+.audi-title,
+.frame-background {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.audi-title {
+  width: 1679px;
+  overflow-x: auto;
+  flex-shrink: 0;
+  align-items: flex-end;
+  gap: var(--gap-6xl);
+}
+
+.frame-background {
+  align-items: flex-start;
+  padding: 0 0 0 var(--padding-xl);
+  box-sizing: border-box;
+  min-height: 436px;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+
+.child-frame-buyer-jane-butler {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  background-color: var(--color-gray-100);
+  max-width: 100%;
+}
+
+.powered-by-social-media-logos {
+  align-self: stretch;
+  height: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-6xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.the-full-line2 {
+  margin: 0;
+  width: 286px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  padding-right: var(--padding-xl);
+}
+
+.a-variety-of2 {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  z-index: 1;
+  margin-top: -2px;
+}
+
+.child-frame-bike-for-test-ride {
+  width: 394px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.xlightershadow-1632885262000-1-icon3 {
+  align-self: stretch;
+  height: 197px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.audi-a12 {
+  margin: 0;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.star {
+  width: 113px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-6xs);
+  box-sizing: border-box;
+  font-size: var(--font-size-2xl);
+}
+
+.frame-set-title,
+.frame-with-frame,
+.reviews-text-icon,
+.star-frame-icon {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.frame-with-frame,
+.reviews-text-icon,
+.star-frame-icon {
+  width: 16px;
+}
+
+.reviews-text-icon,
+.star-frame-icon {
+  width: 15px;
+}
+
+.frame-b1 {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+
+.reviews10 {
+  position: relative;
+  font-weight: 500;
+}
+
+.frame-b-parent,
+.frame-reviews-container-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.frame-b-parent {
+  flex: 1;
+  align-items: center;
+  gap: var(--gap-xl);
+}
+
+.frame-reviews-container-inner {
+  align-self: stretch;
+  align-items: flex-start;
+  padding: 0 0 0 var(--padding-xl);
+}
+
+.fits-most-riders11 {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-dimgray-200);
+}
+
+.from-10982 {
+  height: 36px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+  color: var(--color-teal-200);
+}
+
+.frame-audi-title,
+.frame-reviews-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.frame-reviews-container {
+  width: 225px;
+  padding: 0 var(--padding-xl) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-6xs);
+}
+
+.frame-audi-title {
+  flex: 1;
+  gap: var(--gap-smi);
+  min-width: 216px;
+  max-width: 100%;
+}
+
+.xlightershadow-1632885262000-1-icon4 {
+  align-self: stretch;
+  height: 197px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.audi-a42 {
+  margin: 0;
+  height: 32px;
+  position: relative;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+}
+
+.audi-q-icon,
+.frame-reviews-icon,
+.from-icon,
+.group-child,
+.xlightershadow-icon {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.audi-q-icon,
+.frame-reviews-icon,
+.group-child {
+  width: 16px;
+}
+
+.frame-reviews-icon,
+.group-child {
+  width: 15px;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+
+.reviews11 {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.seeall {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+
+.fits-most-riders12 {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-dimgray-200);
+}
+
+.from-12986 {
+  height: 36px;
+  position: relative;
+  display: inline-block;
+}
+
+.frame-new {
+  position: relative;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-black);
+  white-space: nowrap;
+}
+
+.pfddaceabox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+  font-size: var(--font-size-5xl);
+  color: var(--color-teal-200);
+}
+
+.audi-a4-container,
+.frame-audi-title-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.audi-a4-container {
+  flex-direction: column;
+  gap: var(--gap-5xs);
+}
+
+.frame-audi-title-inner {
+  flex-direction: row;
+  padding: 0 var(--padding-20xl) 0 0;
+}
+
+.frame-audi-title1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-smi);
+  min-width: 216px;
+  max-width: 100%;
+}
+
+.frame-audi,
+.parent-frame-returns-and-polic {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.frame-audi {
+  align-self: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-15xl);
+  font-size: var(--font-size-sm);
+}
+
+.parent-frame-returns-and-polic {
+  width: 704px;
+  flex-shrink: 0;
+  flex-direction: column;
+  padding: 0 var(--padding-9xs) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-smi);
+}
+
+.xlightershadow-1632885262000-1-icon5 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.audi-a52 {
+  margin: 0;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.audi-frame-set1 {
+  width: 116px;
+  height: 34px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-5xs);
+  box-sizing: border-box;
+}
+
+.audi-frame-set5,
+.audi-frame-set6,
+.audi-frame-set7,
+.audi-frame-set8,
+.audi-frame-set9 {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.audi-frame-set7,
+.audi-frame-set8,
+.audi-frame-set9 {
+  width: 16px;
+}
+
+.audi-frame-set8,
+.audi-frame-set9 {
+  width: 15px;
+}
+
+.audi-frame-set4 {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+
+.reviews12 {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.audi-frame-set3 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-2xl);
+}
+
+.fits-most-riders13 {
+  position: relative;
+  font-weight: 500;
+}
+
+.audi-frame-set10,
+.audi-frame-set2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.audi-frame-set10 {
+  flex-direction: row;
+  padding: 0 var(--padding-10xs);
+  color: var(--color-dimgray-200);
+}
+
+.audi-frame-set2 {
+  align-self: stretch;
+  flex-direction: column;
+  gap: var(--gap-5xs);
+  font-size: var(--font-size-sm);
+}
+
+.from-11982 {
+  height: 36px;
+  position: relative;
+  display: inline-block;
+}
+
+.capax-powered-by1 {
+  flex-direction: row;
+  padding: 0 var(--padding-10xs);
+  font-size: var(--font-size-5xl);
+  color: var(--color-teal-200);
+}
+
+.audi-frame-set,
+.capax-powered-by1,
+.from-label-frame1,
+.star-rating2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.audi-frame-set {
+  width: 231px;
+  flex-direction: column;
+  padding: 0 var(--padding-xl) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-6xs);
+}
+
+.from-label-frame1,
+.star-rating2 {
+  width: 252px;
+  flex-direction: row;
+}
+
+.star-rating2 {
+  height: 346px;
+  width: 341px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-smi);
+  font-size: var(--font-size-2xl);
+}
+
+.xlightershadow-1632885262000-1-icon6 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.audi-q32 {
+  margin: 0;
+  height: 32px;
+  position: relative;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+}
+
+.star-reviews-audi1,
+.star-reviews-audi2,
+.star-reviews-audi3,
+.star-reviews-audi4,
+.star-reviews-audi5 {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  border-radius: var(--br-12xs);
+  min-height: 15px;
+}
+
+.star-reviews-audi3,
+.star-reviews-audi4,
+.star-reviews-audi5 {
+  width: 16px;
+}
+
+.star-reviews-audi4,
+.star-reviews-audi5 {
+  width: 15px;
+}
+
+.frame-audi-a-l1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+
+.reviews13 {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.frame-audi-a-l-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+
+.fits-most-riders14 {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-dimgray-200);
+}
+
+.from-12987 {
+  height: 36px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+  color: var(--color-teal-200);
+}
+
+.frame-reviews1,
+.frame-see-all,
+.frame-see-all-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.frame-see-all {
+  flex-direction: column;
+  padding: 0 var(--padding-xl) 0 0;
+  gap: var(--gap-5xs);
+}
+
+.frame-reviews1,
+.frame-see-all-wrapper {
+  width: 249px;
+  flex-direction: row;
+}
+
+.frame-reviews1 {
+  height: 347px;
+  width: 335px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-mini);
+  font-size: var(--font-size-sm);
+}
+
+.see-all2 {
+  height: 24px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.frame-impressed-child {
+  height: 31.7px;
+  width: 31.7px;
+  position: relative;
+}
+
+.frame-impressed,
+.frame-set-jeff-ellis {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.frame-impressed {
+  align-items: center;
+  padding: 0 var(--padding-xl) 0 0;
+  gap: var(--gap-6xl);
+}
+
+.frame-set-jeff-ellis {
+  width: 159px;
+  height: 40px;
+  align-items: flex-start;
+}
+
+.xlightershadow-1632885262000-1-icon7 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.audi-a8l2 {
+  margin: 0;
+  height: 32px;
+  position: relative;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+}
+
+.star-reviews-icon,
+.star-reviews-icon1,
+.star-reviews-icon2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-12xs);
+  width: 16px;
+  height: 15px;
+}
+
+.star-reviews-icon1,
+.star-reviews-icon2 {
+  left: 23px;
+  width: 15px;
+}
+
+.star-reviews-icon2 {
+  left: 45px;
+}
+
+.audia-a {
+  height: 15px;
+  width: 60px;
+  position: relative;
+}
+
+.reviews14 {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.product-banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+
+.fits-most-riders15 {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-dimgray-200);
+}
+
+.from-12988 {
+  height: 36px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+  color: var(--color-teal-200);
+}
+
+.frame-facebook,
+.frame-set-jane-butler,
+.frame-why-love {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.frame-set-jane-butler {
+  flex-direction: column;
+  padding: 0 var(--padding-xl) 0 0;
+  gap: var(--gap-5xs);
+}
+
+.frame-facebook,
+.frame-why-love {
+  width: 249px;
+  flex-direction: row;
+  font-size: var(--font-size-sm);
+}
+
+.frame-why-love {
+  height: 402px;
+  width: 335px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-mini);
+  font-size: var(--font-size-base);
+}
+
+.i-recently-purchased-some-prod,
+.super-friendly-people-and-grea {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.i-recently-purchased-some-prod {
+  width: 1673px;
+  overflow-x: auto;
+  flex-shrink: 0;
+  align-items: flex-end;
+  gap: var(--gap-6xl);
+}
+
+.super-friendly-people-and-grea {
+  align-items: flex-start;
+  padding: 0 0 0 var(--padding-xl);
+  box-sizing: border-box;
+  min-height: 496px;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+
+.why-do-our {
+  margin: 0;
+  height: 54px;
+  width: 809px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 500;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.why-do-our-fans-love-our-bikes {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 71px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.jeff-ellis-child {
+  width: 457px;
+  height: 504px;
+  position: relative;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-darkslategray);
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+}
+
+.jeff-ellis2 {
+  margin: 0;
+  height: 36px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 2;
+}
+
+.verified-buyer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.verified-buyer1 {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-teal-200);
+  z-index: 1;
+}
+
+.marie-j-mills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.frame-child {
+  align-self: stretch;
+  height: 20px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.impressed-with-quality-inner {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) 0 0;
+  box-sizing: border-box;
+}
+
+.impressed-with-quality1 {
+  width: 346px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+
+.i-recently-purchased,
+.impressed-with-the {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.impressed-with-the {
+  margin: 0;
+  align-self: stretch;
+  height: 36px;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.i-recently-purchased {
+  width: 359px;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-dimgray-100);
+  max-width: 100%;
+}
+
+.impressed-with-the-quality-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+
+.read-more1 {
+  position: relative;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-teal-200);
+  z-index: 1;
+}
+
+.powered-by-social-media-logos1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-2xs);
+  min-height: 278px;
+  max-width: 100%;
+}
+
+.powered-by {
+  position: relative;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.twitter-logo-1-icon {
+  align-self: stretch;
+  height: 24px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.powered-by-parent {
+  width: 115px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 2px 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-4xs);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-200);
+}
+
+.capax-logo-child,
+.jeff-ellis1 {
+  background-color: var(--color-white);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.jeff-ellis1 {
+  flex: 1;
+  border: 1px solid var(--color-darkslategray);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-12xl) 29px var(--padding-mini) 45px;
+  gap: var(--gap-19xl);
+  min-width: 343px;
+}
+
+.capax-logo-child {
+  width: 458px;
+  height: 504px;
+  position: relative;
+  border: 1px solid var(--color-gray-300);
+  display: none;
+}
+
+.marie-j-mills1 {
+  margin: 0;
+  height: 36px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 1;
+}
+
+.marie-j-mills-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.verified-buyer2 {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-teal-200);
+  z-index: 2;
+}
+
+.frame-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-9xs) 0 0;
+}
+
+.jeff-appreciation-child {
+  align-self: stretch;
+  height: 20px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.frame-parent,
+.jeff-appreciation {
+  display: flex;
+  align-items: flex-start;
+}
+
+.jeff-appreciation {
+  width: 100px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) 0 0;
+  box-sizing: border-box;
+}
+
+.frame-parent {
+  width: 348px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+
+.the-crew-at {
+  margin: 0;
+  align-self: stretch;
+  height: 72px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 1;
+}
+
+.product-testimonials {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-19xl);
+  max-width: 100%;
+}
+
+.blank-line,
+.love-my-first {
+  margin: 0;
+}
+
+.love-my-first-container {
+  width: 359px;
+  height: 73px;
+  position: relative;
+  font-size: var(--font-size-lg);
+  font-family: var(--font-inter);
+  color: var(--color-dimgray-100);
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.product-testimonials-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-4xl);
+  max-width: 100%;
+}
+
+.powered-by1 {
+  position: relative;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.facebook-logo-1-icon {
+  align-self: stretch;
+  height: 19px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.first-time-e-bike-owner {
+  width: 97px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-2xs);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-200);
+}
+
+.capax-logo,
+.frame-item {
+  background-color: var(--color-white);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.capax-logo {
+  flex: 1;
+  border: 1px solid var(--color-gray-300);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-12xl) 32px var(--padding-lg) 43px;
+  gap: 148px;
+  min-width: 343px;
+}
+
+.frame-item {
+  width: 457px;
+  height: 504px;
+  position: relative;
+  border: 1px solid var(--color-black);
+  display: none;
+}
+
+.jane-butler {
+  margin: 0;
+  height: 36px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 3;
+}
+
+.verified-buyer-frame {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.verified-buyer3 {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-teal-200);
+  z-index: 2;
+}
+
+.facebook-logo-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-9xs) 0 0;
+}
+
+.text-frame-love-my-ebike-child {
+  align-self: stretch;
+  height: 20px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.text-frame-love-my-ebike {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) 0 0;
+  box-sizing: border-box;
+}
+
+.buyer-testimonials {
+  width: 347px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 68px;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+
+.super-friendly-people1 {
+  margin: 0;
+  align-self: stretch;
+  height: 72px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 2;
+}
+
+.i-recently-purchased1,
+.read-more2 {
+  position: relative;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.i-recently-purchased1 {
+  align-self: stretch;
+}
+
+.read-more2 {
+  font-size: var(--font-size-xs);
+  color: var(--color-teal-200);
+}
+
+.capax-frame {
+  width: 359px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-10xs);
+  min-height: 198px;
+  max-width: 100%;
+  font-size: var(--font-size-base);
+  color: var(--color-dimgray-100);
+}
+
+.powered-by2 {
+  position: relative;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.capa-x0020-1-icon {
+  align-self: stretch;
+  height: 24.2px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.free-shipping-frames {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-4xs);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-200);
+}
+
+.homoe-inner,
+.jeff-ellis-parent,
+.rectangle-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.rectangle-parent {
+  flex: 1;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: var(--padding-12xl) 30px var(--padding-mini) 44px;
+  gap: var(--gap-4xl);
+  min-width: 343px;
+  z-index: 1;
+}
+
+.homoe-inner,
+.jeff-ellis-parent {
+  flex-direction: row;
+}
+
+.jeff-ellis-parent {
+  width: 1432px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.homoe-inner {
+  align-self: stretch;
+  padding: 0 70px;
+  box-sizing: border-box;
+  min-height: 633px;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+
+.test-rides-available-frame-child {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.pf-a1ddacea-002truck-1-icon {
+  width: 65px;
+  height: 64px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.free-shipping-on {
+  width: 163px;
+  height: 39px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.pfaddaceatruck-pfddaceabox-fra {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.pf-ddacea34-004box-1-icon {
+  width: 65px;
+  height: 64px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.not-satisfied-weve {
+  align-self: stretch;
+  height: 39px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.pfaddaceatruck-pfddaceabox-fra1 {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+
+.pf-8ba1ddac-001bike-1-icon {
+  width: 83px;
+  height: 82px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.test-rides-available1 {
+  align-self: stretch;
+  height: 23px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.pfaceaeopenbox-frame,
+.quick-hasslefree-setup-frames {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.pfaceaeopenbox-frame {
+  width: 220px;
+  align-items: center;
+  gap: var(--gap-10xs);
+}
+
+.quick-hasslefree-setup-frames {
+  width: 262px;
+  align-items: flex-start;
+  padding: 0 0 var(--padding-base);
+  box-sizing: border-box;
+}
+
+.pf-acea34e8-005openbox-1-icon {
+  height: 64px;
+  width: 65px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.open-box-bike {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 12px 0 0;
+}
+
+.quick-hassle-free-setup {
+  align-self: stretch;
+  height: 39px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.free-shipping {
+  width: 173px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+
+.homoe{
+  position: relative;
+  box-sizing: border-box;
+}
+.test-rides-available-frame2 {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+
+.test-rides-available-frame2 {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--padding-35xl) 269px var(--padding-35xl) 278px;
+  min-height: 245px;
+  gap: var(--gap-xl);
+  text-align: center;
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+
+.homoe {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-white);
+  overflow: hidden;
+  flex-direction: column;
+  padding: 0 0 8px;
+  gap: var(--gap-mini);
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+  
+}
+
+@media screen and (max-width: 1500px) {
   .text-input-field {
-    width: 1728px;
-    margin: 0 !important;
-    position: absolute;
-    right: 72px;
-    bottom: -44px;
-    background-color: var(--color-gray-400);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: var(--padding-5xs) 148px;
-    box-sizing: border-box;
-    gap: 894px;
-    max-width: 100%;
+    flex-wrap: wrap;
   }
-  .text-input-field-item {
-    height: 45px;
-    width: 1728px;
-    position: relative;
-    background-color: var(--color-teal-100);
-    display: none;
-    max-width: 100%;
+
+  .reviews-box {
+    height: auto;
   }
-  .bike-01-3-icon {
-    width: 25px;
-    height: 16px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    z-index: 1;
+
+  .test-rides-available-frame2 {
+    flex-wrap: wrap;
   }
-  .bike-01-3-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 var(--padding-2xs) 0 0;
-  }
-  .final-days-to {
-    margin: 0;
-  }
-  .final-days-to-container {
-    width: 311px;
-    position: relative;
-    display: inline-block;
-    flex-shrink: 0;
-    white-space: nowrap;
-    z-index: 1;
-  }
-  .bike-01-2-icon {
-    align-self: stretch;
-    width: 25px;
-    position: relative;
-    max-height: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    min-height: 16px;
-    z-index: 1;
-  }
+}
+
+@media screen and (max-width: 1200px) {
   .final-days-to-save-700-free-parent {
-    width: 449px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-start;
-    gap: 58px;
-    max-width: 100%;
+    display: none;
   }
-  .free-shipping-absolutely {
-    position: relative;
-    white-space: nowrap;
-    z-index: 1;
-  }
-  .facebook-logo {
-    width: 261px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: left;
-    font-size: var(--font-size-base);
-    font-family: var(--font-poppins);
-  }
-  .bike-01-1-icon {
-    height: 16px;
-    width: 25px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    z-index: 1;
-  }
-  .final-days-to1 {
-    margin: 0;
-  }
-  .final-days-to-container1 {
-    flex: 1;
-    position: relative;
-    display: inline-block;
-    max-width: 100%;
-    white-space: nowrap;
-    z-index: 1;
-  }
-  .bike-01-4-icon {
-    height: 16px;
-    width: 25px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    z-index: 1;
-  }
-  .free-shipping-message,
+
   .text-input-field1 {
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
+    width: 1279px;
   }
+
+  .quick-hasslefree-setup-message {
+    flex-wrap: wrap;
+  }
+
+  .text-frame-i-recently-purchase {
+    padding: 172px var(--padding-35xl) 85px var(--padding-115xl);
+    box-sizing: border-box;
+  }
+
+  .homoe-inner,
+  .why-do-our-fans-love-our-bikes {
+    padding-left: var(--padding-16xl);
+    padding-right: var(--padding-16xl);
+    box-sizing: border-box;
+  }
+
+  .test-rides-available-frame2 {
+    padding-left: 139px;
+    padding-right: var(--padding-115xl);
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .final-days-to-container {
+    display: none;
+  }
+
+  .final-days-to-save-700-free-parent {
+    width: 138px;
+  }
+
   .free-shipping-message {
-    width: 405px;
-    align-items: flex-end;
-    justify-content: flex-start;
-    gap: 47px;
-    min-height: 17px;
+    display: none;
   }
+
   .text-input-field1 {
-    width: 1728px;
-    margin: 0 !important;
-    position: sticky;
-    top: 0;
-    right: 72px;
-    background-color: var(--color-teal-100);
-    align-items: center;
-    justify-content: center;
-    padding: 10px var(--padding-xl) var(--padding-2xs);
-    box-sizing: border-box;
-    gap: 64px;
-    z-index: 99;
-    text-align: center;
-    font-size: var(--font-size-xs);
-    color: var(--color-white);
-    font-family: var(--font-inter);
+    width: 1323px;
   }
-  .rivian-r1t-1-icon {
-    width: 1920px;
-    height: 952px;
-    position: relative;
-    object-fit: cover;
-    display: none;
-    max-width: 100%;
-  }
-  .suvs {
-    position: relative;
-    text-transform: uppercase;
-    font-weight: 600;
-    z-index: 3;
-  }
+
   .brand-name {
-    margin: 0 !important;
-    height: 115px;
-    width: 365px;
-    position: absolute;
-    bottom: -80px;
-    left: -361px;
-    font-size: 30px;
-    font-weight: 700;
-    font-family: inherit;
-    text-align: center;
-    display: inline-block;
-    z-index: 4;
+    font-size: var(--font-size-5xl);
   }
-  .frame-reviews-audi-a,
-  .star-rating-audi-a-reviews {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .star-rating-audi-a-reviews {
-    flex-direction: row;
-    position: relative;
-  }
-  .frame-reviews-audi-a {
-    flex-direction: column;
-    padding: 0 var(--padding-base) 0 0;
-  }
-  .bikes,
-  .electruc,
-  .hatchbacks {
-    position: relative;
-    text-transform: uppercase;
-    font-weight: 600;
-    z-index: 3;
-  }
+
   .frame-pfbaddacbike {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 83px;
-    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 41px;
   }
-  .text-impressed-with-quality-au-child {
-    height: 32px;
-    width: 213px;
-    position: relative;
-    border-radius: var(--br-7xl);
-    border: 1px solid var(--color-white);
+
+  .experience-freedom {
+    font-size: 51px;
+    line-height: 51px;
+  }
+
+  .text-frame-i-recently-purchase {
+    gap: 43px;
+    padding: 112px 27px 55px 67px;
     box-sizing: border-box;
-    display: none;
   }
-  .see-all-audi-a-links {
-    height: 24px;
-    width: 24px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    z-index: 4;
+
+  .join-the-ride {
+    font-size: var(--font-size-10xl);
   }
-  .text-impressed-with-quality-au {
-    flex: 1;
-    border-radius: var(--br-7xl);
-    border: 1px solid var(--color-white);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    padding: var(--padding-9xs) var(--padding-5xs);
-    z-index: 3;
+
+  .star-reviews-audi {
+    flex-wrap: wrap;
   }
-  .frame-audi-a-l-bikes {
-    height: 24px;
-    width: 24px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    z-index: 3;
+
+  .frame-audi-models1 {
+    gap: var(--gap-mini);
   }
-  .group-customer-reviews-audi-q {
-    width: 254px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+
+  .the-full-line {
+    font-size: var(--font-size-10xl);
+  }
+
+  .love-first-electric-bike {
     gap: var(--gap-mid);
   }
-  .quick-hasslefree-setup-message {
-    width: 1361px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: var(--gap-xl);
-    max-width: 100%;
-  }
-  .frame-test-rides-available {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-end;
-    min-height: 114px;
-    max-width: 100%;
-  }
-  .experience,
-  .freedom {
-    margin: 0;
-  }
-  .enjoy-the-ride,
-  .experience-freedom {
-    margin: 0;
-    position: relative;
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-    z-index: 3;
-  }
-  .experience-freedom {
-    align-self: stretch;
-    height: 128px;
-    font-size: inherit;
-    line-height: 100.5%;
-    white-space: pre-wrap;
-  }
-  .enjoy-the-ride {
-    width: 872.2px;
-    font-size: var(--font-size-2xl);
-    max-width: 100%;
-  }
-  .text-fits-most-riders-audi-l {
-    width: 963px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-4xs);
-    max-width: 100%;
-    font-size: 64px;
-  }
-  .as-low-as,
-  .payment-plans-available {
-    align-self: stretch;
-    position: relative;
-    z-index: 3;
-  }
-  .as-low-as {
-    font-weight: 500;
-    z-index: 4;
-  }
-  .frame-jane-butler-review {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .frame-i-recently-purchased-som {
-    width: 350px;
-    border: 0;
-    outline: 0;
-    background-color: var(--color-black);
-    height: 42px;
-    border-radius: var(--br-7xl);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: var(--padding-4xs);
-    box-sizing: border-box;
-    font-family: var(--font-poppins);
-    font-weight: 500;
-    font-size: var(--font-size-base);
-    color: var(--color-white);
-    max-width: 100%;
-    z-index: 3;
-  }
-  .text-love-my-first-electric-bi {
-    width: 708px;
-    flex-direction: column;
-    gap: var(--gap-4xs);
-    font-size: var(--font-size-base);
-  }
-  .audi-a-bike-model,
-  .text-frame-i-recently-purchase,
-  .text-love-my-first-electric-bi {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    max-width: 100%;
-  }
-  .text-frame-i-recently-purchase {
-    flex: 1;
-    flex-direction: column;
-    padding: 265px 108px 131px 268px;
-    box-sizing: border-box;
-    gap: 87px;
-    background-image: url(./public/2022rivianr1t-1@2x.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    z-index: 2;
-    font-size: var(--font-size-xs);
-  }
-  .audi-a-bike-model {
-    align-self: stretch;
-    flex-direction: row;
-    position: relative;
-  }
-  .group-reviews {
-    width: 1920px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 104%;
-    flex-shrink: 0;
-  }
-  .reviews-box,
-  .star-rating {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .star-rating {
-    width: 1848px;
-    justify-content: flex-start;
-    max-width: 107%;
-    flex-shrink: 0;
-  }
-  .reviews-box {
-    align-self: stretch;
-    height: 812px;
-    justify-content: flex-end;
-    max-width: 100%;
-    text-align: left;
-    font-size: var(--font-size-base);
-    color: var(--color-white);
-    font-family: var(--font-poppins);
-  }
-  .frame-not-satisfied-weve-got-e {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    background-color: var(--color-white);
-    border: 2px solid var(--color-teal-100);
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-  }
-  .text-free-shipping-on-all-ebik-child {
-    position: absolute;
-    top: 25px;
-    left: 9px;
-    width: 30px;
-    height: 22.1px;
-    z-index: 1;
-  }
-  .text-free-shipping-on-all-ebik {
-    cursor: pointer;
-    border: 0;
-    padding: 0;
-    background-color: transparent;
-    height: 49px;
-    width: 49px;
-    position: absolute;
-    margin: 0 !important;
-    top: -13px;
-    right: 33px;
-  }
-  .join-the-ride,
-  .view-more {
-    position: relative;
-    display: inline-block;
-  }
-  .join-the-ride {
-    margin: 0;
-    height: 54px;
-    width: 524px;
-    font-size: inherit;
-    font-weight: 500;
-    font-family: inherit;
-    flex-shrink: 0;
-    max-width: 100%;
-  }
-  .view-more {
-    height: 24px;
-    font-size: var(--font-size-base);
-    color: var(--color-teal-100);
-    white-space: pre-wrap;
-  }
-  .star-reviews-audi {
-    width: 1575px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 0 var(--padding-xl) 0 0;
-    box-sizing: border-box;
-    gap: var(--gap-xl);
-    max-width: 100%;
-  }
-  .frame-quick-hasslefree-setup,
-  .frame-set-audi-bikes {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    max-width: 100%;
-  }
-  .frame-set-audi-bikes {
-    flex: 1;
-    min-height: 68px;
-  }
-  .frame-quick-hasslefree-setup {
-    width: 1682px;
-    padding: 0 0 0 var(--padding-xl);
-    box-sizing: border-box;
-    position: relative;
-  }
-  .why-do-fans-love-bikes {
-    height: 99px;
-    width: 13px;
-    position: relative;
-  }
-  .mask-group-icon,
-  .mask-group-icon1,
-  .mask-group-icon2 {
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    object-fit: cover;
-    min-width: 297px;
-    min-height: 600px;
-  }
-  .mask-group-icon2 {
-    object-fit: contain;
-  }
-  .frame-audi-models,
-  .frame-audi-models1 {
-    margin-top: 200px;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-  .frame-audi-models1 {
-    width: 1498px;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 0 var(--padding-2xl) 0 0;
-    gap: 31px;
-  }
-  .frame-audi-models {
-    align-self: stretch;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 var(--padding-lg);
-    min-height: 690px;
-  }
-  .read-more {
-    position: relative;
-    font-size: var(--font-size-xs);
-    font-weight: 500;
-    color: var(--color-teal-200);
-    display: none;
-  }
-  .the-full-line {
-    margin: 0;
-    width: 586px;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-    padding-right: var(--padding-xl);
-  }
-  .a-variety-of {
-    align-self: stretch;
-    position: relative;
-    font-size: var(--font-size-base);
-    font-weight: 500;
-    z-index: 1;
-    margin-top: -2px;
-  }
-  .read-more-link {
-    width: 394px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    max-width: 100%;
-  }
-  .xlightershadow-1632885262000-1-icon {
-    align-self: stretch;
-    height: 197px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-  .audi-a1 {
-    margin: 0;
-    flex: 1;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-  }
-  .customer-testimonials1 {
-    width: 113px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 0 var(--padding-6xs);
-    box-sizing: border-box;
-    font-size: var(--font-size-2xl);
-  }
-  .marie-j-m-review,
-  .super-friendly-people {
-    height: 15px;
-    width: 15px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .i-recently-purchased-products,
-  .pfbaddacbike-node-icon,
-  .test-rides-available-frame {
-    height: 15px;
-    width: 16px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .pfbaddacbike-node-icon,
-  .test-rides-available-frame {
-    width: 15px;
-  }
-  .powered-by-logo-group {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-6xs);
-  }
-  .reviews {
-    position: relative;
-    font-weight: 500;
-  }
-  .read-more-link1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-xl);
-  }
-  .fits-most-riders {
-    position: relative;
-    font-weight: 500;
-    color: var(--color-dimgray-200);
-  }
-  .from-1098 {
-    height: 36px;
-    position: relative;
-    font-size: var(--font-size-5xl);
-    display: inline-block;
-    color: var(--color-teal-200);
-  }
-  .customer-testimonials,
-  .frame-powered-by {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .customer-testimonials {
-    padding: 0 var(--padding-xl) 0 0;
-    gap: var(--gap-6xs);
-  }
-  .frame-powered-by {
-    flex: 1;
-    gap: var(--gap-smi);
-    min-width: 216px;
-    max-width: 100%;
-  }
-  .xlightershadow-1632885262000-5-icon {
-    align-self: stretch;
-    height: 197px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-  .audi-a4 {
-    margin: 0;
-    height: 32px;
-    position: relative;
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-  }
-  .frame-group-audi-reviews,
-  .see-all-link,
-  .star-rating-icon,
-  .text-from-audi-q,
-  .xlightershadow-rectangle-icon {
-    height: 15px;
-    width: 15px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .see-all-link,
-  .text-from-audi-q,
-  .xlightershadow-rectangle-icon {
-    width: 16px;
-  }
-  .see-all-link,
-  .xlightershadow-rectangle-icon {
-    width: 15px;
-  }
-  .frame-set-audi-bikes1 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-6xs);
-  }
-  .reviews1 {
-    height: 21px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .test-ride-available-frame {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-lg);
-  }
-  .fits-most-riders1 {
-    position: relative;
-    font-weight: 500;
-    color: var(--color-dimgray-200);
-  }
-  .from-1298 {
-    height: 36px;
-    position: relative;
-    display: inline-block;
-  }
-  .impressed-with-quality {
-    position: relative;
-    font-size: var(--font-size-base);
-    font-weight: 500;
-    color: var(--color-black);
-    white-space: nowrap;
-  }
-  .jeff-ellis-review1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-lg);
-    font-size: var(--font-size-5xl);
-    color: var(--color-teal-200);
-  }
-  .audi-a4-parent,
-  .frame-powered-by-inner {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .audi-a4-parent {
-    flex-direction: column;
-    gap: var(--gap-5xs);
-  }
-  .frame-powered-by-inner {
-    flex-direction: row;
-    padding: 0 var(--padding-20xl) 0 0;
-  }
-  .frame-powered-by1 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-smi);
-    min-width: 216px;
-    max-width: 100%;
-  }
-  .impressed-quality-group1,
-  .love-first-electric-bike {
-    display: flex;
-    justify-content: flex-start;
-    max-width: 100%;
-    margin-right: 0;
-  }
-  .love-first-electric-bike {
-    align-self: stretch;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--gap-15xl);
-    font-size: var(--font-size-sm);
-  }
-  .impressed-quality-group1 {
-    width: 625px;
-    flex-shrink: 0;
-    flex-direction: column;
-    padding: 0 var(--padding-9xs) 0 0;
-    box-sizing: border-box;
-    gap: var(--gap-smi);
-  }
-  .xlightershadow-1632885262000-3-icon {
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  .audi-a5 {
-    margin: 0;
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-  }
-  .review-card-a {
-    width: 116px;
-    height: 34px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 0 var(--padding-5xs);
-    box-sizing: border-box;
-  }
-  .audi-frame-a,
-  .audi-frame-a1,
-  .audi-frame-a2,
-  .audi-frame-a3,
-  .audi-frame-a4 {
-    height: 15px;
-    width: 15px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .audi-frame-a2,
-  .audi-frame-a3,
-  .audi-frame-a4 {
-    width: 16px;
-  }
-  .audi-frame-a3,
-  .audi-frame-a4 {
-    width: 15px;
-  }
-  .group-a {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-6xs);
-  }
-  .reviews2 {
-    height: 21px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .see-all-button-a {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-2xl);
-  }
-  .fits-most-riders2 {
-    position: relative;
-    font-weight: 500;
-  }
-  .frame-b,
-  .star-rating-a {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .star-rating-a {
-    flex-direction: row;
-    padding: 0 var(--padding-10xs);
-    color: var(--color-dimgray-200);
-  }
-  .frame-b {
-    align-self: stretch;
-    flex-direction: column;
-    gap: var(--gap-5xs);
-    font-size: var(--font-size-sm);
-  }
-  .from-1198 {
-    height: 36px;
-    position: relative;
-    display: inline-block;
-  }
-  .read-more-link-a {
-    flex-direction: row;
-    padding: 0 var(--padding-10xs);
-    font-size: var(--font-size-5xl);
-    color: var(--color-teal-200);
-  }
-  .frame-set-a,
-  .read-more-link-a,
-  .rectangle-a,
-  .star-a {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    
-  }
-  .star-a {
-    width: 231px;
-    flex-direction: column;
-    padding: 0 var(--padding-xl) 0 0;
-    box-sizing: border-box;
-    gap: var(--gap-6xs);
-  }
-  .frame-set-a,
-  .rectangle-a {
-    width: 252px;
-    flex-direction: row;
-  }
-  .frame-set-a {
-    height: 346px;
-    width: 341px;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--gap-smi);
-    font-size: var(--font-size-2xl);
-  }
-  .xlightershadow-1632885262000-4-icon {
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  .audi-q3 {
-    margin: 0;
-    height: 32px;
-    position: relative;
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-  }
-  .reviews-container-icon,
-  .reviews-container-icon1 {
-    height: 15px;
-    width: 15px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .reviews-container-icon2,
-  .reviews-container-icon3,
-  .reviews-container-icon4 {
-    height: 15px;
-    width: 16px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .reviews-container-icon3,
-  .reviews-container-icon4 {
-    width: 15px;
-  }
-  .frame-set {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-6xs);
-  }
-  .reviews3 {
-    height: 21px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .not-satisfied-section-a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-lg);
-  }
-  .fits-most-riders3 {
-    position: relative;
-    font-weight: 500;
-    color: var(--color-dimgray-200);
-  }
-  .from-12981 {
-    height: 36px;
-    position: relative;
-    font-size: var(--font-size-5xl);
-    display: inline-block;
-    color: var(--color-teal-200);
-  }
-  .first-electric-bike-a,
-  .frame-c,
-  .impressed-section-a {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .first-electric-bike-a {
-    flex-direction: column;
-    padding: 0 var(--padding-xl) 0 0;
-    gap: var(--gap-5xs);
-  }
-  .frame-c,
-  .impressed-section-a {
-    width: 249px;
-    flex-direction: row;
-  }
-  .frame-c {
-    height: 347px;
-    width: 335px;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--gap-mini);
-    font-size: var(--font-size-sm);
-  }
-  .see-all {
-    height: 24px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .review-text-child {
-    height: 31.7px;
-    width: 31.7px;
-    position: relative;
-  }
-  .from-label,
-  .review-text {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  .review-text {
-    align-items: center;
-    padding: 0 var(--padding-xl) 0 0;
-    gap: var(--gap-6xl);
-  }
-  .from-label {
-    width: 159px;
-    height: 40px;
-    align-items: flex-start;
-  }
-  .xlightershadow-1632885262000-6-icon {
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  .audi-a8l {
-    margin: 0;
-    height: 32px;
-    position: relative;
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-  }
-  .read-more-button,
-  .read-more-button1,
-  .read-more-button2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: var(--br-12xs);
-    width: 16px;
-    height: 15px;
-  }
-  .read-more-button1,
-  .read-more-button2 {
-    left: 23px;
-    width: 15px;
-  }
-  .read-more-button2 {
-    left: 45px;
-  }
-  .impressed-quality {
-    height: 15px;
-    width: 60px;
-    position: relative;
-  }
-  .reviews4 {
-    height: 21px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .jeff-ellis {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-lg);
-  }
-  .fits-most-riders4 {
-    position: relative;
-    font-weight: 500;
-    color: var(--color-dimgray-200);
-  }
-  .from-12982 {
-    height: 36px;
-    position: relative;
-    font-size: var(--font-size-5xl);
-    display: inline-block;
-    color: var(--color-teal-200);
-  }
-  .audi-a8l-parent,
-  .from-label-parent,
-  .see-all-button {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .audi-a8l-parent {
-    flex-direction: column;
-    padding: 0 var(--padding-xl) 0 0;
-    gap: var(--gap-5xs);
-  }
-  .from-label-parent,
-  .see-all-button {
-    width: 249px;
-    flex-direction: row;
-    font-size: var(--font-size-sm);
-  }
-  .from-label-parent {
-    height: 402px;
-    width: 335px;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--gap-mini);
-    font-size: var(--font-size-base);
-  }
-  .impressed-quality-group,
-  .jeff-ellis-review {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    max-width: 100%;
-  }
-  .impressed-quality-group {
-    width: 1673px;
-    overflow: hidden;
-    flex-shrink: 0;
-    align-items: flex-end;
-    gap: var(--gap-6xl);
-  }
-  .jeff-ellis-review {
-    align-items: flex-start;
-    padding: 0 0 0 var(--padding-xl);
-    box-sizing: border-box;
-    min-height: 438px;
-    text-align: left;
-    font-size: var(--font-size-17xl);
-    color: var(--color-black);
-    font-family: var(--font-poppins);
-  }
-  .audi-section {
-    height: 1px;
-    flex: 1;
-    position: relative;
-    background-color: var(--color-gray-100);
-    max-width: 100%;
-  }
-  .test-rides-available {
-    align-self: stretch;
-    height: 11px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 0 0 var(--padding-4xs);
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-  .homoe-child {
-    align-self: stretch;
-    position: relative;
-    background-color: var(--color-gray-400);
-    height: 78px;
-    display: none;
-    z-index: 8;
-  }
+
   .the-full-line1 {
-    margin: 0;
-    width: 686px;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-    padding-right: var(--padding-xl);
+    font-size: var(--font-size-10xl);
   }
-  .a-variety-of1 {
-    align-self: stretch;
-    position: relative;
-    font-size: var(--font-size-base);
-    font-weight: 500;
-    z-index: 1;
-    margin-top: -2px;
-  }
-  .star-rating1 {
-    width: 394px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    max-width: 100%;
-  }
-  .xlightershadow-1632885262000-7-icon {
-    align-self: stretch;
-    height: 197px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-  .audi-a11 {
-    margin: 0;
-    flex: 1;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-  }
-  .see-all-button1 {
-    width: 113px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 0 var(--padding-6xs);
-    box-sizing: border-box;
-    font-size: var(--font-size-2xl);
-  }
-  .group-icon,
-  .impressed-quality-frame,
-  .jeff-ellis-text-verified-buyer,
-  .text-quality-impressed-frame {
-    height: 15px;
-    width: 15px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .group-icon,
-  .jeff-ellis-text-verified-buyer,
-  .text-quality-impressed-frame {
-    width: 16px;
-  }
-  .group-icon,
-  .text-quality-impressed-frame {
-    width: 15px;
-  }
-  .frame-audi-a-l {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-6xs);
-  }
-  .reviews5 {
-    position: relative;
-    font-weight: 500;
-  }
-  .from-text-audi-q,
-  .see-all-frame-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  .see-all-frame-group {
-    flex: 1;
-    align-items: center;
-    gap: var(--gap-xl);
-  }
-  .from-text-audi-q {
-    align-self: stretch;
-    align-items: flex-start;
-    padding: 0 0 0 var(--padding-xl);
-  }
-  .fits-most-riders5 {
-    position: relative;
-    font-weight: 500;
-    color: var(--color-dimgray-200);
-  }
-  .from-10981 {
-    height: 36px;
-    position: relative;
-    font-size: var(--font-size-5xl);
-    display: inline-block;
-    color: var(--color-teal-200);
-  }
-  .review-text1,
-  .xlightershadow {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .review-text1 {
-    width: 225px;
-    padding: 0 var(--padding-xl) 0 0;
-    box-sizing: border-box;
-    gap: var(--gap-6xs);
-  }
-  .xlightershadow {
-    flex: 1;
-    gap: var(--gap-smi);
-    min-width: 216px;
-    max-width: 100%;
-  }
-  .xlightershadow-1632885262000-8-icon {
-    align-self: stretch;
-    height: 197px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-  .audi-a41 {
-    margin: 0;
-    height: 32px;
-    position: relative;
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-  }
-  .frame-with-star-rating,
-  .pfaceaeopenbox-icon,
-  .pfaddaceatruck-icon,
-  .pfddaceabox-icon,
-  .quick-setup-icon {
-    height: 15px;
-    width: 15px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .pfaceaeopenbox-icon,
-  .pfddaceabox-icon,
-  .quick-setup-icon {
-    width: 16px;
-  }
-  .pfaceaeopenbox-icon,
-  .quick-setup-icon {
-    width: 15px;
-  }
-  .audi-frame {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-6xs);
-  }
-  .reviews6 {
-    height: 21px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .powered-by-logo {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-lg);
-  }
-  .fits-most-riders6 {
-    position: relative;
-    font-weight: 500;
-    color: var(--color-dimgray-200);
-  }
-  .from-12983 {
-    height: 36px;
-    position: relative;
-    display: inline-block;
-  }
-  .frame-reviews {
-    position: relative;
-    font-size: var(--font-size-base);
-    font-weight: 500;
-    color: var(--color-black);
-    white-space: nowrap;
-  }
-  .xlightershadow-rectangle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-lg);
-    font-size: var(--font-size-5xl);
-    color: var(--color-teal-200);
-  }
-  .audi-a4-group,
-  .xlightershadow-inner {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .audi-a4-group {
-    flex-direction: column;
-    gap: var(--gap-5xs);
-  }
-  .xlightershadow-inner {
-    flex-direction: row;
-    padding: 0 var(--padding-20xl) 0 0;
-  }
-  .frame-with-shadow,
-  .from-text,
-  .xlightershadow1 {
-    display: flex;
-    justify-content: flex-start;
-    max-width: 100%;
-  }
-  .xlightershadow1 {
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--gap-smi);
-    min-width: 216px;
-  }
-  .frame-with-shadow,
-  .from-text {
-    align-items: flex-start;
-  }
+
   .frame-with-shadow {
-    align-self: stretch;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--gap-15xl);
-    font-size: var(--font-size-sm);
+    gap: var(--gap-mid);
   }
-  .from-text {
-    width: 704px;
-    flex-shrink: 0;
-    flex-direction: column;
-    padding: 0 var(--padding-9xs) 0 0;
-    box-sizing: border-box;
-    gap: var(--gap-smi);
-  }
-  .xlightershadow-1632885262000-9-icon {
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  .audi-a51 {
-    margin: 0;
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-  }
-  .quick-hasslefree-setup-frame {
-    width: 116px;
-    height: 34px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 0 var(--padding-5xs);
-    box-sizing: border-box;
-  }
-  .star-rating-audi,
-  .star-rating-audi1,
-  .star-rating-audi2,
-  .star-rating-audi3,
-  .star-rating-audi4 {
-    height: 15px;
-    width: 15px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .star-rating-audi2,
-  .star-rating-audi3,
-  .star-rating-audi4 {
-    width: 16px;
-  }
-  .star-rating-audi3,
-  .star-rating-audi4 {
-    width: 15px;
-  }
-  .audi-reviews-container {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-6xs);
-  }
-  .reviews7 {
-    height: 21px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .frame-set-audi-bikes2 {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-2xl);
-  }
-  .fits-most-riders7 {
-    position: relative;
-    font-weight: 500;
-  }
-  .frame-love-my-first-electric-b,
-  .reviews-container-left {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .reviews-container-left {
-    flex-direction: row;
-    padding: 0 var(--padding-10xs);
-    color: var(--color-dimgray-200);
-  }
-  .frame-love-my-first-electric-b {
-    align-self: stretch;
-    flex-direction: column;
-    gap: var(--gap-5xs);
-    font-size: var(--font-size-sm);
-  }
-  .from-11981 {
-    height: 36px;
-    position: relative;
-    display: inline-block;
-  }
-  .audi-bike-frame,
-  .test-rides-available-frame1 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .audi-bike-frame {
-    flex-direction: row;
-    padding: 0 var(--padding-10xs);
-    font-size: var(--font-size-5xl);
-    color: var(--color-teal-200);
-  }
-  .test-rides-available-frame1 {
-    width: 231px;
-    flex-direction: column;
-    padding: 0 var(--padding-xl) 0 0;
-    box-sizing: border-box;
-    gap: var(--gap-6xs);
-  }
-  .i-recently-purchased-text,
-  .jane-butler-text-verified-buye {
-    width: 252px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .jane-butler-text-verified-buye {
-    height: 346px;
-    width: 341px;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--gap-smi);
-    font-size: var(--font-size-2xl);
-  }
-  .xlightershadow-1632885262000-1-icon1 {
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  .audi-q31 {
-    margin: 0;
-    height: 32px;
-    position: relative;
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-  }
-  .facebook-reviews-container,
-  .facebook-reviews-container1 {
-    height: 15px;
-    width: 15px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .facebook-reviews-container2,
-  .facebook-reviews-container3,
-  .facebook-reviews-container4 {
-    height: 15px;
-    width: 16px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .facebook-reviews-container3,
-  .facebook-reviews-container4 {
-    width: 15px;
-  }
-  .first-electric-bike-review {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-6xs);
-  }
-  .reviews8 {
-    height: 21px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .jeff-ellis-review2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-lg);
-  }
-  .fits-most-riders8 {
-    position: relative;
-    font-weight: 500;
-    color: var(--color-dimgray-200);
-  }
-  .from-12984 {
-    height: 36px;
-    position: relative;
-    font-size: var(--font-size-5xl);
-    display: inline-block;
-    color: var(--color-teal-200);
-  }
-  .audi-a-l-reviews-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 var(--padding-xl) 0 0;
-    gap: var(--gap-5xs);
-  }
-  .from-label-frame,
-  .quality-impressed-group {
-    width: 249px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .from-label-frame {
-    height: 347px;
-    width: 335px;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--gap-mini);
-    font-size: var(--font-size-sm);
-  }
-  .see-all1 {
-    height: 24px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .parent-frame-audi-bikes-child {
-    height: 31.7px;
-    width: 31.7px;
-    position: relative;
-  }
-  .parent-frame-audi-bikes,
-  .pfaddaceatruck-free-shipping {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  .parent-frame-audi-bikes {
-    align-items: center;
-    padding: 0 var(--padding-xl) 0 0;
-    gap: var(--gap-6xl);
-  }
-  .pfaddaceatruck-free-shipping {
-    width: 159px;
-    height: 40px;
-    align-items: flex-start;
-  }
-  .xlightershadow-1632885262000-1-icon2 {
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  .audi-a8l1 {
-    margin: 0;
-    height: 32px;
-    position: relative;
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-  }
-  .frame-with-frame-children,
-  .frame-with-frame-children1,
-  .frame-with-frame-children2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: var(--br-12xs);
-    width: 16px;
-    height: 15px;
-  }
-  .frame-with-frame-children1,
-  .frame-with-frame-children2 {
-    left: 23px;
-    width: 15px;
-  }
-  .frame-with-frame-children2 {
-    left: 45px;
-  }
-  .xlightershadow-rectangle1 {
-    height: 15px;
-    width: 60px;
-    position: relative;
-  }
-  .reviews9 {
-    height: 21px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .child-frame-car-model-q {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-lg);
-  }
-  .fits-most-riders10 {
-    position: relative;
-    font-weight: 500;
-    color: var(--color-dimgray-200);
-  }
-  .from-12985 {
-    height: 36px;
-    position: relative;
-    font-size: var(--font-size-5xl);
-    display: inline-block;
-    color: var(--color-teal-200);
-  }
-  .why-do-fans-love-bikes1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 var(--padding-xl) 0 0;
-    gap: var(--gap-5xs);
-  }
-  .capax-powered-by,
-  .fits-most-riders9 {
-    width: 249px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    font-size: var(--font-size-sm);
-  }
-  .capax-powered-by {
-    height: 402px;
-    width: 335px;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--gap-mini);
-    font-size: var(--font-size-base);
-  }
-  .audi-title,
-  .frame-background {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    max-width: 100%;
-  }
-  .audi-title {
-    width: 1679px;
-    overflow-x: auto;
-    flex-shrink: 0;
-    align-items: flex-end;
-    gap: var(--gap-6xl);
-  }
-  .frame-background {
-    align-items: flex-start;
-    padding: 0 0 0 var(--padding-xl);
-    box-sizing: border-box;
-    min-height: 436px;
-    text-align: left;
-    font-size: var(--font-size-17xl);
-    color: var(--color-black);
-    font-family: var(--font-poppins);
-  }
-  .child-frame-buyer-jane-butler {
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    background-color: var(--color-gray-100);
-    max-width: 100%;
-  }
-  .powered-by-social-media-logos {
-    align-self: stretch;
-    height: 8px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 0 var(--padding-6xs);
-    box-sizing: border-box;
-    max-width: 100%;
-  }
+
   .the-full-line2 {
-    margin: 0;
-    width: 286px;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-    padding-right: var(--padding-xl);
+    font-size: var(--font-size-10xl);
   }
-  .a-variety-of2 {
-    align-self: stretch;
-    position: relative;
-    font-size: var(--font-size-base);
-    font-weight: 500;
-    z-index: 1;
-    margin-top: -2px;
-  }
-  .child-frame-bike-for-test-ride {
-    width: 394px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    max-width: 100%;
-  }
-  .xlightershadow-1632885262000-1-icon3 {
-    align-self: stretch;
-    height: 197px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-  .audi-a12 {
-    margin: 0;
-    flex: 1;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-  }
-  .star {
-    width: 113px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 0 var(--padding-6xs);
-    box-sizing: border-box;
-    font-size: var(--font-size-2xl);
-  }
-  .frame-set-title,
-  .frame-with-frame,
-  .reviews-text-icon,
-  .star-frame-icon {
-    height: 15px;
-    width: 15px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .frame-with-frame,
-  .reviews-text-icon,
-  .star-frame-icon {
-    width: 16px;
-  }
-  .reviews-text-icon,
-  .star-frame-icon {
-    width: 15px;
-  }
-  .frame-b1 {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-6xs);
-  }
-  .reviews10 {
-    position: relative;
-    font-weight: 500;
-  }
-  .frame-b-parent,
-  .frame-reviews-container-inner {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  .frame-b-parent {
-    flex: 1;
-    align-items: center;
-    gap: var(--gap-xl);
-  }
-  .frame-reviews-container-inner {
-    align-self: stretch;
-    align-items: flex-start;
-    padding: 0 0 0 var(--padding-xl);
-  }
-  .fits-most-riders11 {
-    position: relative;
-    font-weight: 500;
-    color: var(--color-dimgray-200);
-  }
-  .from-10982 {
-    height: 36px;
-    position: relative;
-    font-size: var(--font-size-5xl);
-    display: inline-block;
-    color: var(--color-teal-200);
-  }
-  .frame-audi-title,
-  .frame-reviews-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .frame-reviews-container {
-    width: 225px;
-    padding: 0 var(--padding-xl) 0 0;
-    box-sizing: border-box;
-    gap: var(--gap-6xs);
-  }
-  .frame-audi-title {
-    flex: 1;
-    gap: var(--gap-smi);
-    min-width: 216px;
-    max-width: 100%;
-  }
-  .xlightershadow-1632885262000-1-icon4 {
-    align-self: stretch;
-    height: 197px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-  .audi-a42 {
-    margin: 0;
-    height: 32px;
-    position: relative;
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-  }
-  .audi-q-icon,
-  .frame-reviews-icon,
-  .from-icon,
-  .group-child,
-  .xlightershadow-icon {
-    height: 15px;
-    width: 15px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .audi-q-icon,
-  .frame-reviews-icon,
-  .group-child {
-    width: 16px;
-  }
-  .frame-reviews-icon,
-  .group-child {
-    width: 15px;
-  }
-  .group {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-6xs);
-  }
-  .reviews11 {
-    height: 21px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .seeall {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-lg);
-  }
-  .fits-most-riders12 {
-    position: relative;
-    font-weight: 500;
-    color: var(--color-dimgray-200);
-  }
-  .from-12986 {
-    height: 36px;
-    position: relative;
-    display: inline-block;
-  }
-  .frame-new {
-    position: relative;
-    font-size: var(--font-size-base);
-    font-weight: 500;
-    color: var(--color-black);
-    white-space: nowrap;
-  }
-  .pfddaceabox {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-lg);
-    font-size: var(--font-size-5xl);
-    color: var(--color-teal-200);
-  }
-  .audi-a4-container,
-  .frame-audi-title-inner {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .audi-a4-container {
-    flex-direction: column;
-    gap: var(--gap-5xs);
-  }
-  .frame-audi-title-inner {
-    flex-direction: row;
-    padding: 0 var(--padding-20xl) 0 0;
-  }
-  .frame-audi-title1 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-smi);
-    min-width: 216px;
-    max-width: 100%;
-  }
-  .frame-audi,
-  .parent-frame-returns-and-polic {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    max-width: 100%;
-  }
+
   .frame-audi {
-    align-self: stretch;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--gap-15xl);
-    font-size: var(--font-size-sm);
+    gap: var(--gap-mid);
   }
-  .parent-frame-returns-and-polic {
-    width: 704px;
-    flex-shrink: 0;
-    flex-direction: column;
-    padding: 0 var(--padding-9xs) 0 0;
-    box-sizing: border-box;
-    gap: var(--gap-smi);
-  }
-  .xlightershadow-1632885262000-1-icon5 {
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  .audi-a52 {
-    margin: 0;
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-  }
-  .audi-frame-set1 {
-    width: 116px;
-    height: 34px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 0 var(--padding-5xs);
-    box-sizing: border-box;
-  }
-  .audi-frame-set5,
-  .audi-frame-set6,
-  .audi-frame-set7,
-  .audi-frame-set8,
-  .audi-frame-set9 {
-    height: 15px;
-    width: 15px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .audi-frame-set7,
-  .audi-frame-set8,
-  .audi-frame-set9 {
-    width: 16px;
-  }
-  .audi-frame-set8,
-  .audi-frame-set9 {
-    width: 15px;
-  }
-  .audi-frame-set4 {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-6xs);
-  }
-  .reviews12 {
-    height: 21px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .audi-frame-set3 {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-2xl);
-  }
-  .fits-most-riders13 {
-    position: relative;
-    font-weight: 500;
-  }
-  .audi-frame-set10,
-  .audi-frame-set2 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .audi-frame-set10 {
-    flex-direction: row;
-    padding: 0 var(--padding-10xs);
-    color: var(--color-dimgray-200);
-  }
-  .audi-frame-set2 {
-    align-self: stretch;
-    flex-direction: column;
-    gap: var(--gap-5xs);
-    font-size: var(--font-size-sm);
-  }
-  .from-11982 {
-    height: 36px;
-    position: relative;
-    display: inline-block;
-  }
-  .capax-powered-by1 {
-    flex-direction: row;
-    padding: 0 var(--padding-10xs);
-    font-size: var(--font-size-5xl);
-    color: var(--color-teal-200);
-  }
-  .audi-frame-set,
-  .capax-powered-by1,
-  .from-label-frame1,
-  .star-rating2 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .audi-frame-set {
-    width: 231px;
-    flex-direction: column;
-    padding: 0 var(--padding-xl) 0 0;
-    box-sizing: border-box;
-    gap: var(--gap-6xs);
-  }
-  .from-label-frame1,
-  .star-rating2 {
-    width: 252px;
-    flex-direction: row;
-  }
-  .star-rating2 {
-    height: 346px;
-    width: 341px;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--gap-smi);
-    font-size: var(--font-size-2xl);
-  }
-  .xlightershadow-1632885262000-1-icon6 {
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  .audi-q32 {
-    margin: 0;
-    height: 32px;
-    position: relative;
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-  }
-  .star-reviews-audi1,
-  .star-reviews-audi2,
-  .star-reviews-audi3,
-  .star-reviews-audi4,
-  .star-reviews-audi5 {
-    height: 15px;
-    width: 15px;
-    position: relative;
-    border-radius: var(--br-12xs);
-    min-height: 15px;
-  }
-  .star-reviews-audi3,
-  .star-reviews-audi4,
-  .star-reviews-audi5 {
-    width: 16px;
-  }
-  .star-reviews-audi4,
-  .star-reviews-audi5 {
-    width: 15px;
-  }
-  .frame-audi-a-l1 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-6xs);
-  }
-  .reviews13 {
-    height: 21px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .frame-audi-a-l-parent {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-lg);
-  }
-  .fits-most-riders14 {
-    position: relative;
-    font-weight: 500;
-    color: var(--color-dimgray-200);
-  }
-  .from-12987 {
-    height: 36px;
-    position: relative;
-    font-size: var(--font-size-5xl);
-    display: inline-block;
-    color: var(--color-teal-200);
-  }
-  .frame-reviews1,
-  .frame-see-all,
-  .frame-see-all-wrapper {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .frame-see-all {
-    flex-direction: column;
-    padding: 0 var(--padding-xl) 0 0;
-    gap: var(--gap-5xs);
-  }
-  .frame-reviews1,
-  .frame-see-all-wrapper {
-    width: 249px;
-    flex-direction: row;
-  }
-  .frame-reviews1 {
-    height: 347px;
-    width: 335px;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--gap-mini);
-    font-size: var(--font-size-sm);
-  }
-  .see-all2 {
-    height: 24px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .frame-impressed-child {
-    height: 31.7px;
-    width: 31.7px;
-    position: relative;
-  }
-  .frame-impressed,
-  .frame-set-jeff-ellis {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  .frame-impressed {
-    align-items: center;
-    padding: 0 var(--padding-xl) 0 0;
-    gap: var(--gap-6xl);
-  }
-  .frame-set-jeff-ellis {
-    width: 159px;
-    height: 40px;
-    align-items: flex-start;
-  }
-  .xlightershadow-1632885262000-1-icon7 {
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  .audi-a8l2 {
-    margin: 0;
-    height: 32px;
-    position: relative;
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-  }
-  .star-reviews-icon,
-  .star-reviews-icon1,
-  .star-reviews-icon2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: var(--br-12xs);
-    width: 16px;
-    height: 15px;
-  }
-  .star-reviews-icon1,
-  .star-reviews-icon2 {
-    left: 23px;
-    width: 15px;
-  }
-  .star-reviews-icon2 {
-    left: 45px;
-  }
-  .audia-a {
-    height: 15px;
-    width: 60px;
-    position: relative;
-  }
-  .reviews14 {
-    height: 21px;
-    position: relative;
-    font-weight: 500;
-    display: inline-block;
-  }
-  .product-banner {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-lg);
-  }
-  .fits-most-riders15 {
-    position: relative;
-    font-weight: 500;
-    color: var(--color-dimgray-200);
-  }
-  .from-12988 {
-    height: 36px;
-    position: relative;
-    font-size: var(--font-size-5xl);
-    display: inline-block;
-    color: var(--color-teal-200);
-  }
-  .frame-facebook,
-  .frame-set-jane-butler,
-  .frame-why-love {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .frame-set-jane-butler {
-    flex-direction: column;
-    padding: 0 var(--padding-xl) 0 0;
-    gap: var(--gap-5xs);
-  }
-  .frame-facebook,
-  .frame-why-love {
-    width: 249px;
-    flex-direction: row;
-    font-size: var(--font-size-sm);
-  }
-  .frame-why-love {
-    height: 402px;
-    width: 335px;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--gap-mini);
-    font-size: var(--font-size-base);
-  }
-  .i-recently-purchased-some-prod,
-  .super-friendly-people-and-grea {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    max-width: 100%;
-  }
-  .i-recently-purchased-some-prod {
-    width: 1673px;
-    overflow-x: auto;
-    flex-shrink: 0;
-    align-items: flex-end;
-    gap: var(--gap-6xl);
-  }
-  .super-friendly-people-and-grea {
-    align-items: flex-start;
-    padding: 0 0 0 var(--padding-xl);
-    box-sizing: border-box;
-    min-height: 496px;
-    text-align: left;
-    font-size: var(--font-size-17xl);
-    color: var(--color-black);
-    font-family: var(--font-poppins);
-  }
+
   .why-do-our {
-    margin: 0;
-    height: 54px;
-    width: 809px;
-    position: relative;
-    font-size: inherit;
-    font-weight: 500;
-    font-family: inherit;
-    display: inline-block;
-    flex-shrink: 0;
-    max-width: 100%;
+    font-size: var(--font-size-10xl);
   }
-  .why-do-our-fans-love-our-bikes {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 71px;
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-  .jeff-ellis-child {
-    width: 457px;
-    height: 504px;
-    position: relative;
-    background-color: var(--color-white);
-    border: 1px solid var(--color-darkslategray);
-    box-sizing: border-box;
-    display: none;
-    max-width: 100%;
-  }
-  .jeff-ellis2 {
-    margin: 0;
-    height: 36px;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-    z-index: 2;
-  }
-  .verified-buyer {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0;
-  }
-  .verified-buyer1 {
-    position: relative;
-    font-size: var(--font-size-sm);
-    font-weight: 500;
-    color: var(--color-teal-200);
-    z-index: 1;
-  }
-  .marie-j-mills {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .frame-child {
-    align-self: stretch;
-    height: 20px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    z-index: 1;
-  }
-  .impressed-with-quality-inner {
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: var(--padding-5xs) 0 0;
-    box-sizing: border-box;
-  }
-  .impressed-with-quality1 {
-    width: 346px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: var(--gap-xl);
-    max-width: 100%;
-  }
-  .i-recently-purchased,
-  .impressed-with-the {
-    position: relative;
-    display: inline-block;
-    z-index: 1;
-  }
-  .impressed-with-the {
-    margin: 0;
-    align-self: stretch;
-    height: 36px;
-    font-size: inherit;
-    font-weight: 600;
-    font-family: inherit;
-  }
-  .i-recently-purchased {
-    width: 359px;
-    font-size: var(--font-size-base);
-    font-weight: 500;
-    color: var(--color-dimgray-100);
-    max-width: 100%;
-  }
-  .impressed-with-the-quality-parent {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-xl);
-    max-width: 100%;
-  }
-  .read-more1 {
-    position: relative;
-    font-size: var(--font-size-xs);
-    font-weight: 500;
-    color: var(--color-teal-200);
-    z-index: 1;
-  }
-  .powered-by-social-media-logos1 {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-2xs);
-    min-height: 278px;
-    max-width: 100%;
-  }
-  .powered-by {
-    position: relative;
-    font-weight: 500;
-    z-index: 1;
-  }
-  .twitter-logo-1-icon {
-    align-self: stretch;
-    height: 24px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    z-index: 1;
-  }
-  .powered-by-parent {
-    width: 115px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 2px 0 0;
-    box-sizing: border-box;
-    gap: var(--gap-4xs);
-    font-size: var(--font-size-xs);
-    color: var(--color-gray-200);
-  }
-  .capax-logo-child,
-  .jeff-ellis1 {
-    background-color: var(--color-white);
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-  .jeff-ellis1 {
-    flex: 1;
-    border: 1px solid var(--color-darkslategray);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: var(--padding-12xl) 29px var(--padding-mini) 45px;
-    gap: var(--gap-19xl);
-    min-width: 343px;
-  }
-  .capax-logo-child {
-    width: 458px;
-    height: 504px;
-    position: relative;
-    border: 1px solid var(--color-gray-300);
-    display: none;
-  }
-  .marie-j-mills1 {
-    margin: 0;
-    height: 36px;
-    position: relative;
-    font-size: inherit;
-    font-weight: 600;
-    font-family: inherit;
-    display: inline-block;
-    z-index: 1;
-  }
-  .marie-j-mills-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0;
-  }
-  .verified-buyer2 {
-    position: relative;
-    font-size: var(--font-size-sm);
-    font-weight: 500;
-    color: var(--color-teal-200);
-    z-index: 2;
-  }
-  .frame-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 var(--padding-9xs) 0 0;
-  }
-  .jeff-appreciation-child {
-    align-self: stretch;
-    height: 20px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    z-index: 1;
-  }
-  .frame-parent,
-  .jeff-appreciation {
-    display: flex;
-    align-items: flex-start;
-  }
-  .jeff-appreciation {
-    width: 100px;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: var(--padding-5xs) 0 0;
-    box-sizing: border-box;
-  }
-  .frame-parent {
-    width: 348px;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: var(--gap-xl);
-    max-width: 100%;
-  }
-  .the-crew-at {
-    margin: 0;
-    align-self: stretch;
-    height: 72px;
-    position: relative;
-    font-size: inherit;
-    font-weight: 600;
-    font-family: inherit;
-    display: inline-block;
-    z-index: 1;
-  }
-  .product-testimonials {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-19xl);
-    max-width: 100%;
-  }
-  .blank-line,
-  .love-my-first {
-    margin: 0;
-  }
-  .love-my-first-container {
-    width: 359px;
-    height: 73px;
-    position: relative;
-    font-size: var(--font-size-lg);
-    font-family: var(--font-inter);
-    color: var(--color-dimgray-100);
-    display: inline-block;
-    flex-shrink: 0;
-    max-width: 100%;
-    z-index: 1;
-  }
-  .product-testimonials-parent {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-4xl);
-    max-width: 100%;
-  }
-  .powered-by1 {
-    position: relative;
-    font-weight: 500;
-    z-index: 1;
-  }
-  .facebook-logo-1-icon {
-    align-self: stretch;
-    height: 19px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    z-index: 1;
-  }
-  .first-time-e-bike-owner {
-    width: 97px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-2xs);
-    font-size: var(--font-size-xs);
-    color: var(--color-gray-200);
-  }
+
   .capax-logo,
-  .frame-item {
-    background-color: var(--color-white);
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-  .capax-logo {
-    flex: 1;
-    border: 1px solid var(--color-gray-300);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: var(--padding-12xl) 32px var(--padding-lg) 43px;
-    gap: 148px;
-    min-width: 343px;
-  }
-  .frame-item {
-    width: 457px;
-    height: 504px;
-    position: relative;
-    border: 1px solid var(--color-black);
-    display: none;
-  }
-  .jane-butler {
-    margin: 0;
-    height: 36px;
-    position: relative;
-    font-size: inherit;
-    font-weight: 600;
-    font-family: inherit;
-    display: inline-block;
-    z-index: 3;
-  }
-  .verified-buyer-frame {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0;
-  }
-  .verified-buyer3 {
-    position: relative;
-    font-size: var(--font-size-sm);
-    font-weight: 500;
-    color: var(--color-teal-200);
-    z-index: 2;
-  }
-  .facebook-logo-frame {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 var(--padding-9xs) 0 0;
-  }
-  .text-frame-love-my-ebike-child {
-    align-self: stretch;
-    height: 20px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    z-index: 2;
-  }
-  .text-frame-love-my-ebike {
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: var(--padding-5xs) 0 0;
-    box-sizing: border-box;
-  }
-  .buyer-testimonials {
-    width: 347px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    min-height: 68px;
-    gap: var(--gap-xl);
-    max-width: 100%;
-  }
-  .super-friendly-people1 {
-    margin: 0;
-    align-self: stretch;
-    height: 72px;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-    z-index: 2;
-  }
-  .i-recently-purchased1,
-  .read-more2 {
-    position: relative;
-    font-weight: 500;
-    z-index: 2;
-  }
-  .i-recently-purchased1 {
-    align-self: stretch;
-  }
-  .read-more2 {
-    font-size: var(--font-size-xs);
-    color: var(--color-teal-200);
-  }
-  .capax-frame {
-    width: 359px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-10xs);
-    min-height: 198px;
-    max-width: 100%;
-    font-size: var(--font-size-base);
-    color: var(--color-dimgray-100);
-  }
-  .powered-by2 {
-    position: relative;
-    font-weight: 500;
-    z-index: 2;
-  }
-  .capa-x0020-1-icon {
-    align-self: stretch;
-    height: 24.2px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    z-index: 2;
-  }
-  .free-shipping-frames {
-    width: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-4xs);
-    font-size: var(--font-size-xs);
-    color: var(--color-gray-200);
-  }
-  .homoe-inner,
-  .jeff-ellis-parent,
+  .jeff-ellis1,
   .rectangle-parent {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    max-width: 100%;
-  }
-  .rectangle-parent {
-    flex: 1;
-    background-color: var(--color-white);
-    border: 1px solid var(--color-black);
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-xl);
     box-sizing: border-box;
-    flex-direction: column;
-    padding: var(--padding-12xl) 30px var(--padding-mini) 44px;
-    gap: var(--gap-4xl);
-    min-width: 343px;
-    z-index: 1;
+    min-width: 100%;
   }
-  .homoe-inner,
-  .jeff-ellis-parent {
-    flex-direction: row;
+}
+
+@media screen and (max-width: 450px) {
+  .brand-name {
+    font-size: var(--font-size-lg);
   }
-  .jeff-ellis-parent {
-    width: 1432px;
+
+  .experience-freedom {
+    font-size: 38px;
+    line-height: 39px;
+  }
+
+  .enjoy-the-ride {
+    font-size: var(--font-size-mid);
+  }
+
+  .text-frame-i-recently-purchase {
+    gap: 22px;
+    padding-left: var(--padding-xl);
+    box-sizing: border-box;
+  }
+
+  .join-the-ride,
+  .the-full-line {
+    font-size: var(--font-size-3xl);
+  }
+
+  .audi-a1 {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-1098 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .audi-a4 {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-1298 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .audi-a5 {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-1198 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .audi-q3 {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-12981 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .audi-a8l {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-12982 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .the-full-line1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .audi-a11 {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-10981 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .audi-a41 {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-12983 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .audi-a51 {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-11981 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .audi-q31 {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-12984 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .audi-a8l1 {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-12985 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .the-full-line2 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .audi-a12 {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-10982 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .audi-a42 {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-12986 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .audi-a52 {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-11982 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .audi-q32 {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-12987 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .audi-a8l2 {
+    font-size: var(--font-size-mid);
+  }
+
+  .from-12988 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .why-do-our {
+    font-size: var(--font-size-3xl);
+  }
+
+  .jeff-ellis2 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .impressed-with-quality1 {
     flex-wrap: wrap;
-    gap: 30px;
   }
-  .homoe-inner {
-    align-self: stretch;
-    padding: 0 70px;
-    box-sizing: border-box;
-    min-height: 633px;
-    text-align: left;
-    font-size: var(--font-size-5xl);
-    color: var(--color-black);
-    font-family: var(--font-poppins);
+
+  .impressed-with-the {
+    font-size: var(--font-size-lgi);
   }
-  .test-rides-available-frame-child {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    margin: 0 !important;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  .pf-a1ddacea-002truck-1-icon {
-    width: 65px;
-    height: 64px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    object-fit: cover;
-    z-index: 1;
-  }
-  .free-shipping-on {
-    width: 163px;
-    height: 39px;
-    position: relative;
-    display: inline-block;
-    flex-shrink: 0;
-    z-index: 1;
-  }
-  .pfaddaceatruck-pfddaceabox-fra {
-    width: 220px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 16px;
-  }
-  .pf-ddacea34-004box-1-icon {
-    width: 65px;
-    height: 64px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    object-fit: cover;
-    z-index: 1;
-  }
-  .not-satisfied-weve {
-    align-self: stretch;
-    height: 39px;
-    position: relative;
-    display: inline-block;
-    flex-shrink: 0;
-    z-index: 1;
-  }
-  .pfaddaceatruck-pfddaceabox-fra1 {
-    width: 220px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-xs);
-  }
-  .pf-8ba1ddac-001bike-1-icon {
-    width: 83px;
-    height: 82px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    object-fit: cover;
-    z-index: 1;
-  }
-  .test-rides-available1 {
-    align-self: stretch;
-    height: 23px;
-    position: relative;
-    display: inline-block;
-    flex-shrink: 0;
-    z-index: 1;
-  }
-  .pfaceaeopenbox-frame,
-  .quick-hasslefree-setup-frames {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .pfaceaeopenbox-frame {
-    width: 220px;
-    align-items: center;
-    gap: var(--gap-10xs);
-  }
-  .quick-hasslefree-setup-frames {
-    width: 262px;
-    align-items: flex-start;
-    padding: 0 0 var(--padding-base);
+
+  .jeff-ellis1 {
+    gap: var(--gap-lgi);
+    padding-left: var(--padding-3xl);
     box-sizing: border-box;
   }
-  .pf-acea34e8-005openbox-1-icon {
-    height: 64px;
-    width: 65px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    object-fit: cover;
-    z-index: 1;
+
+  .marie-j-mills1 {
+    font-size: var(--font-size-lgi);
   }
-  .open-box-bike {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 12px 0 0;
+
+  .frame-parent {
+    flex-wrap: wrap;
   }
-  .quick-hassle-free-setup {
-    align-self: stretch;
-    height: 39px;
-    position: relative;
-    display: inline-block;
-    flex-shrink: 0;
-    z-index: 1;
+
+  .the-crew-at {
+    font-size: var(--font-size-lgi);
   }
-  .free-shipping {
-    width: 173px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-xs);
+
+  .product-testimonials {
+    gap: var(--gap-lgi);
   }
-  .homoe,
+
+  .capax-logo {
+    gap: 74px;
+    padding-left: var(--padding-2xl);
+    box-sizing: border-box;
+  }
+
+  .jane-butler {
+    font-size: var(--font-size-lgi);
+  }
+
+  .buyer-testimonials {
+    flex-wrap: wrap;
+  }
+
+  .super-friendly-people1 {
+    font-size: var(--font-size-lgi);
+  }
+
+  .rectangle-parent {
+    padding-left: var(--padding-3xl);
+    box-sizing: border-box;
+  }
+
   .test-rides-available-frame2 {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
     box-sizing: border-box;
   }
-  .test-rides-available-frame2 {
-    align-self: stretch;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: var(--padding-35xl) 269px var(--padding-35xl) 278px;
-    min-height: 245px;
-    gap: var(--gap-xl);
-    text-align: center;
-    font-size: var(--font-size-base);
-    color: var(--color-white);
-    font-family: var(--font-inter);
-  }
-  .homoe {
-    width: 100%;
-    background-color: var(--color-white);
-    overflow: hidden;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 0 0 8px;
-    gap: var(--gap-mini);
-    letter-spacing: normal;
-    text-align: left;
-    font-size: var(--font-size-17xl);
-    color: var(--color-black);
-    font-family: var(--font-poppins);
-  }
-  @media screen and (max-width: 1500px) {
-    .text-input-field {
-      flex-wrap: wrap;
-    }
-    .reviews-box {
-      height: auto;
-    }
-    .test-rides-available-frame2 {
-      flex-wrap: wrap;
-    }
-  }
-  @media screen and (max-width: 1200px) {
-    .final-days-to-save-700-free-parent {
-      display: none;
-    }
-    .text-input-field1 {
-      width: 1279px;
-    }
-    .quick-hasslefree-setup-message {
-      flex-wrap: wrap;
-    }
-    .text-frame-i-recently-purchase {
-      padding: 172px var(--padding-35xl) 85px var(--padding-115xl);
-      box-sizing: border-box;
-    }
-    .homoe-inner,
-    .why-do-our-fans-love-our-bikes {
-      padding-left: var(--padding-16xl);
-      padding-right: var(--padding-16xl);
-      box-sizing: border-box;
-    }
-    .test-rides-available-frame2 {
-      padding-left: 139px;
-      padding-right: var(--padding-115xl);
-      box-sizing: border-box;
-    }
-  }
-  @media screen and (max-width: 825px) {
-    .final-days-to-container {
-      display: none;
-    }
-    .final-days-to-save-700-free-parent {
-      width: 138px;
-    }
-    .free-shipping-message {
-      display: none;
-    }
-    .text-input-field1 {
-      width: 1323px;
-    }
-    .brand-name {
-      font-size: var(--font-size-5xl);
-    }
-    .frame-pfbaddacbike {
-      flex-wrap: wrap;
-      gap: 41px;
-    }
-    .experience-freedom {
-      font-size: 51px;
-      line-height: 51px;
-    }
-    .text-frame-i-recently-purchase {
-      gap: 43px;
-      padding: 112px 27px 55px 67px;
-      box-sizing: border-box;
-    }
-    .join-the-ride {
-      font-size: var(--font-size-10xl);
-    }
-    .star-reviews-audi {
-      flex-wrap: wrap;
-    }
-    .frame-audi-models1 {
-      gap: var(--gap-mini);
-    }
-    .the-full-line {
-      font-size: var(--font-size-10xl);
-    }
-    .love-first-electric-bike {
-      gap: var(--gap-mid);
-    }
-    .the-full-line1 {
-      font-size: var(--font-size-10xl);
-    }
-    .frame-with-shadow {
-      gap: var(--gap-mid);
-    }
-    .the-full-line2 {
-      font-size: var(--font-size-10xl);
-    }
-    .frame-audi {
-      gap: var(--gap-mid);
-    }
-    .why-do-our {
-      font-size: var(--font-size-10xl);
-    }
-    .capax-logo,
-    .jeff-ellis1,
-    .rectangle-parent {
-      padding-top: var(--padding-xl);
-      padding-bottom: var(--padding-xl);
-      box-sizing: border-box;
-      min-width: 100%;
-    }
-  }
-  @media screen and (max-width: 450px) {
-    .brand-name {
-      font-size: var(--font-size-lg);
-    }
-    .experience-freedom {
-      font-size: 38px;
-      line-height: 39px;
-    }
-    .enjoy-the-ride {
-      font-size: var(--font-size-mid);
-    }
-    .text-frame-i-recently-purchase {
-      gap: 22px;
-      padding-left: var(--padding-xl);
-      box-sizing: border-box;
-    }
-    .join-the-ride,
-    .the-full-line {
-      font-size: var(--font-size-3xl);
-    }
-    .audi-a1 {
-      font-size: var(--font-size-mid);
-    }
-    .from-1098 {
-      font-size: var(--font-size-lgi);
-    }
-    .audi-a4 {
-      font-size: var(--font-size-mid);
-    }
-    .from-1298 {
-      font-size: var(--font-size-lgi);
-    }
-    .audi-a5 {
-      font-size: var(--font-size-mid);
-    }
-    .from-1198 {
-      font-size: var(--font-size-lgi);
-    }
-    .audi-q3 {
-      font-size: var(--font-size-mid);
-    }
-    .from-12981 {
-      font-size: var(--font-size-lgi);
-    }
-    .audi-a8l {
-      font-size: var(--font-size-mid);
-    }
-    .from-12982 {
-      font-size: var(--font-size-lgi);
-    }
-    .the-full-line1 {
-      font-size: var(--font-size-3xl);
-    }
-    .audi-a11 {
-      font-size: var(--font-size-mid);
-    }
-    .from-10981 {
-      font-size: var(--font-size-lgi);
-    }
-    .audi-a41 {
-      font-size: var(--font-size-mid);
-    }
-    .from-12983 {
-      font-size: var(--font-size-lgi);
-    }
-    .audi-a51 {
-      font-size: var(--font-size-mid);
-    }
-    .from-11981 {
-      font-size: var(--font-size-lgi);
-    }
-    .audi-q31 {
-      font-size: var(--font-size-mid);
-    }
-    .from-12984 {
-      font-size: var(--font-size-lgi);
-    }
-    .audi-a8l1 {
-      font-size: var(--font-size-mid);
-    }
-    .from-12985 {
-      font-size: var(--font-size-lgi);
-    }
-    .the-full-line2 {
-      font-size: var(--font-size-3xl);
-    }
-    .audi-a12 {
-      font-size: var(--font-size-mid);
-    }
-    .from-10982 {
-      font-size: var(--font-size-lgi);
-    }
-    .audi-a42 {
-      font-size: var(--font-size-mid);
-    }
-    .from-12986 {
-      font-size: var(--font-size-lgi);
-    }
-    .audi-a52 {
-      font-size: var(--font-size-mid);
-    }
-    .from-11982 {
-      font-size: var(--font-size-lgi);
-    }
-    .audi-q32 {
-      font-size: var(--font-size-mid);
-    }
-    .from-12987 {
-      font-size: var(--font-size-lgi);
-    }
-    .audi-a8l2 {
-      font-size: var(--font-size-mid);
-    }
-    .from-12988 {
-      font-size: var(--font-size-lgi);
-    }
-    .why-do-our {
-      font-size: var(--font-size-3xl);
-    }
-    .jeff-ellis2 {
-      font-size: var(--font-size-lgi);
-    }
-    .impressed-with-quality1 {
-      flex-wrap: wrap;
-    }
-    .impressed-with-the {
-      font-size: var(--font-size-lgi);
-    }
-    .jeff-ellis1 {
-      gap: var(--gap-lgi);
-      padding-left: var(--padding-3xl);
-      box-sizing: border-box;
-    }
-    .marie-j-mills1 {
-      font-size: var(--font-size-lgi);
-    }
-    .frame-parent {
-      flex-wrap: wrap;
-    }
-    .the-crew-at {
-      font-size: var(--font-size-lgi);
-    }
-    .product-testimonials {
-      gap: var(--gap-lgi);
-    }
-    .capax-logo {
-      gap: 74px;
-      padding-left: var(--padding-2xl);
-      box-sizing: border-box;
-    }
-    .jane-butler {
-      font-size: var(--font-size-lgi);
-    }
-    .buyer-testimonials {
-      flex-wrap: wrap;
-    }
-    .super-friendly-people1 {
-      font-size: var(--font-size-lgi);
-    }
-    .rectangle-parent {
-      padding-left: var(--padding-3xl);
-      box-sizing: border-box;
-    }
-    .test-rides-available-frame2 {
-      padding-left: var(--padding-xl);
-      padding-right: var(--padding-xl);
-      box-sizing: border-box;
-    }
-  }
-  
-  body {
-    margin: 0;
-    line-height: normal;
-  }
-  
-  :root {
-    /* fonts */
-    --font-inter: Inter;
-    --font-poppins: Poppins;
-  
-    /* font sizes */
-    --font-size-base: 16px;
-    --font-size-xs: 12px;
-    --font-size-5xl: 24px;
-    --font-size-lgi: 19px;
-    --font-size-sm: 14px;
-    --font-size-lg: 18px;
-    --font-size-17xl: 36px;
-    --font-size-10xl: 29px;
-    --font-size-3xl: 22px;
-    --font-size-2xl: 21px;
-    --font-size-mid: 17px;
-  
-    /* Colors */
-    --color-white: #fff;
-    --color-black: #000;
-    --color-gray-100: #9c9292;
-    --color-gray-200: #857c7c;
-    --color-gray-300: #292929;
-    --color-gray-400: #17181c;
-    --color-teal-100: #2e7564;
-    --color-teal-200: #29705f;
-    --color-dimgray-100: #727171;
-    --color-dimgray-200: #535353;
-    --color-darkslategray: #373232;
-  
-    /* Gaps */
-    --gap-mini: 15px;
-    --gap-xl: 20px;
-    --gap-xs: 12px;
-    --gap-10xs: 3px;
-    --gap-4xl: 23px;
-    --gap-4xs: 9px;
-    --gap-2xs: 11px;
-    --gap-19xl: 38px;
-    --gap-lgi: 19px;
-    --gap-6xl: 25px;
-    --gap-5xs: 8px;
-    --gap-lg: 18px;
-    --gap-6xs: 7px;
-    --gap-smi: 13px;
-    --gap-2xl: 21px;
-    --gap-15xl: 34px;
-    --gap-mid: 17px;
-  
-    /* Paddings */
-    --padding-35xl: 54px;
-    --padding-115xl: 134px;
-    --padding-xl: 20px;
-    --padding-base: 16px;
-    --padding-16xl: 35px;
-    --padding-12xl: 31px;
-    --padding-mini: 15px;
-    --padding-3xl: 22px;
-    --padding-5xs: 8px;
-    --padding-9xs: 4px;
-    --padding-lg: 18px;
-    --padding-2xl: 21px;
-    --padding-10xs: 3px;
-    --padding-20xl: 39px;
-    --padding-6xs: 7px;
-    --padding-4xs: 9px;
-    --padding-2xs: 11px;
-  
-    /* Border radiuses */
-    --br-12xs: 1px;
-    --br-7xl: 26px;
-  }
-  section{
-    max-width: 1985px;
-  }
-  
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-poppins: Poppins;
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --font-size-xs: 12px;
+  --font-size-5xl: 24px;
+  --font-size-lgi: 19px;
+  --font-size-sm: 14px;
+  --font-size-lg: 18px;
+  --font-size-17xl: 36px;
+  --font-size-10xl: 29px;
+  --font-size-3xl: 22px;
+  --font-size-2xl: 21px;
+  --font-size-mid: 17px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-100: #9c9292;
+  --color-gray-200: #857c7c;
+  --color-gray-300: #292929;
+  --color-gray-400: #17181c;
+  --color-teal-100: #2e7564;
+  --color-teal-200: #29705f;
+  --color-dimgray-100: #727171;
+  --color-dimgray-200: #535353;
+  --color-darkslategray: #373232;
+
+  /* Gaps */
+  --gap-mini: 15px;
+  --gap-xl: 20px;
+  --gap-xs: 12px;
+  --gap-10xs: 3px;
+  --gap-4xl: 23px;
+  --gap-4xs: 9px;
+  --gap-2xs: 11px;
+  --gap-19xl: 38px;
+  --gap-lgi: 19px;
+  --gap-6xl: 25px;
+  --gap-5xs: 8px;
+  --gap-lg: 18px;
+  --gap-6xs: 7px;
+  --gap-smi: 13px;
+  --gap-2xl: 21px;
+  --gap-15xl: 34px;
+  --gap-mid: 17px;
+
+  /* Paddings */
+  --padding-35xl: 54px;
+  --padding-115xl: 134px;
+  --padding-xl: 20px;
+  --padding-base: 16px;
+  --padding-16xl: 35px;
+  --padding-12xl: 31px;
+  --padding-mini: 15px;
+  --padding-3xl: 22px;
+  --padding-5xs: 8px;
+  --padding-9xs: 4px;
+  --padding-lg: 18px;
+  --padding-2xl: 21px;
+  --padding-10xs: 3px;
+  --padding-20xl: 39px;
+  --padding-6xs: 7px;
+  --padding-4xs: 9px;
+  --padding-2xs: 11px;
+
+  /* Border radiuses */
+  --br-12xs: 1px;
+  --br-7xl: 26px;
+}
+
+section {
+  max-width: 1985px;
+}

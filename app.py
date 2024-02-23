@@ -89,7 +89,14 @@ create_excel_file_if_not_exists()
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    unique_brands = db.session.query(datas.brand).distinct().all()
+    unique_seats = db.session.query(datas.seat_capacity).distinct().all()
+    unique_colors = db.session.query(datas.colours).distinct().all()
+    unique_fuel = db.session.query(datas.fuel).distinct().all()
+    row = datas.query.all()
+    return render_template('index.html',rows= row,fun = 'all',brands = unique_brands,colours = unique_colors,fuels = unique_fuel,seats = unique_seats)
+
+   
 
 @app.route('/importing')
 def excel_file_import():
@@ -167,13 +174,12 @@ def addcompare(id):
 @app.route('/filter', methods=['POST', 'GET'])
 def filter():
     if request.method == 'POST':
+        fuel = ""
         seat = request.form.get('seating')  # Use request.form.get to get form data
         brand = request.form.get('brand')
         color = request.form.get('color')
         fuel = request.form.get('fuel')
-
         query = db.session.query(datas)
-
         if seat != "":
             query = query.filter(datas.seat_capacity == seat)  # Correct variable name to seat
         if brand != "":
