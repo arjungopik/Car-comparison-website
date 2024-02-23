@@ -193,7 +193,10 @@ header .foot {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-
+header img{
+  height: 100vh;
+  overflow: hidden;
+}
 
 .popup h3{
     font-size: 31px;
