@@ -84,7 +84,10 @@ nav ul li a:hover {
 
 .search input {
   border-radius: 11px;
-  margin-right: 111px
+  margin-right:0;
+}
+.search button{
+  margin-right: 50px;
 }
 
 /* header */

@@ -76,24 +76,32 @@
     <div class="rectangle-9">
       <div class="flex-column">
         <span class="the-freedom">{{row.description}}</span>
-        <a href="/addtocart/{{row.id}}" class="rectangle-a">
-          ORDER NOW
-        </a>
+
         <a id="viewmore" href="/preview/{{row.id}}" class="rectangle-a">
           VIEW MORE
         </a>
         <div style="display: flex;" class="row"><a id="compare" href="/addcompare/{{row.id}}" class="rectangle-m">
             ADD TO COMPARE
           </a>
+          {% if fun == 'all' %}
           <a id="compare" href="/addtowishlist/{{row.id}}" class="rectangle-m">
             ADD TO WISHLIST
           </a>
-        </div>c
 
+          {% else %}
+          <a id="compare" href="/remove/{{row.id}}" class="rectangle-m">
+            REMOVE
+          </a>
+          {% endif%}
+        </div>
+       
 
         <div class="row" id="recomm">
           <span class="fits-most-riders">*Fits most riders 5'6" - 6'4"</span>
+
+          {% if fun == 'all' %}
           <span class="fits-most-riders">{{ row.recommentation}}% recommented</span>
+          {% endif%}
         </div>
 
         <span class="freedom">{{row.brand | upper }}

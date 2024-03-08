@@ -109,8 +109,8 @@ def excel_file_import():
         seat_capacity = str(row['seating_capacity']).split()[0]
         # Create a new datas object
         data = datas(
-            brand=row['brand'],
-            model=row['model'],
+            brand=row['brand'].upper(),
+            model=row['model'].upper(),
             year=row['year'],
             price=price,
             type=str(row['type']).split()[0],
@@ -152,6 +152,14 @@ def addcart(id):
     db.session.add(data)
     db.session.commit()
     return redirect(url_for('cart'))
+
+@app.route('/remove/<id>')
+def remove(id):
+    row = Wishlist.query.get(id)
+    if row:
+        db.session.delete(row)
+        db.session.commit()
+    return redirect(url_for('wishlist'))
 
 
 @app.route('/addtowishlist/<id>')
@@ -197,6 +205,15 @@ def filter():
 
 
     return "Method not allowed", 405  # Return method not allowed if not POST request
+
+@app.route('/search',methods = ['POST','GET'])
+def search():
+    if request.method == 'POST':
+        search = request.form.get('searchname').upper()
+        query = db.session.query(datas)
+        carname = query.filter(datas.brand == search or datas.model == search)
+    return render_template('allcarpreview.html', rows = carname, fun = 'all')
+
 
 @app.route('/compare')
 def compare():
