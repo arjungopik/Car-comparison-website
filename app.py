@@ -183,9 +183,13 @@ def addcompare(id):
 def filter():
     if request.method == 'POST':
         fuel = ""
+        color = ""
+
         seat = request.form.get('seating')  # Use request.form.get to get form data
         brand = request.form.get('brand')
         color = request.form.get('color')
+        if color == None:
+            color = ''
         fuel = request.form.get('fuel')
         query = db.session.query(datas)
         if seat != "":
@@ -196,6 +200,8 @@ def filter():
             query = query.filter(datas.colours == color)
         if fuel != "":
             query = query.filter(datas.fuel == fuel)
+
+        print(seat,fuel,color,brand)
         unique_brands = db.session.query(datas.brand).distinct().all()
         unique_seats = db.session.query(datas.seat_capacity).distinct().all()
         unique_colors = db.session.query(datas.colours).distinct().all()
@@ -203,8 +209,6 @@ def filter():
         results = query.all()
         return render_template('allcarpreview.html', rows=results, fun='all',brands = unique_brands,colours = unique_colors,fuels = unique_fuel,seats = unique_seats)
 
-
-    return "Method not allowed", 405  # Return method not allowed if not POST request
 
 @app.route('/search',methods = ['POST','GET'])
 def search():

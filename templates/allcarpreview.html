@@ -77,13 +77,21 @@
       <div class="flex-column">
         <span class="the-freedom">{{row.description}}</span>
 
+        {% if fun == 'all' %}
         <a id="viewmore" href="/preview/{{row.id}}" class="rectangle-a">
           VIEW MORE
         </a>
-        <div style="display: flex;" class="row"><a id="compare" href="/addcompare/{{row.id}}" class="rectangle-m">
+        {% else %}
+        <a id="viewmore" href="/preview/{{row.carsid}}" class="rectangle-a">
+          VIEW MORE
+        </a>
+        {% endif %}
+        <div style="display: flex;" class="row">
+          {% if fun == 'all' %}
+          <a id="compare" href="/addcompare/{{row.id}}" class="rectangle-m">
             ADD TO COMPARE
           </a>
-          {% if fun == 'all' %}
+          
           <a id="compare" href="/addtowishlist/{{row.id}}" class="rectangle-m">
             ADD TO WISHLIST
           </a>

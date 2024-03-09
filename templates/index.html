@@ -60,13 +60,7 @@
                 <div class="left">
                     <h2>Experience <br> Freedom</h2>
                     <h3>Enjoy the ride</h3>
-                    <div class="lower">
-                        <h4>payment plans available </h4>
-                        <h5>as low as 1000/month</h5>
-                    </div>
-                    <div class="learnmore">
-                        <h3>Learn More</h3>
-                    </div>
+                    
                 </div>
                 <img src="{{ url_for('static',filename='assets/images/back.jpg' ) }}"
                     alt="">
@@ -88,7 +82,7 @@
 
                         <div class="row">
                             <label for="brand">Brand:</label>
-                            <select id="brand" name="brand">
+                            <select id="brand" name='brand'>
                                 <option value="">Select a brand</option>
                                 {% for brandd in brands%}
                                 <option value="{{brandd.brand}}">{{brandd.brand | upper }}</option>
@@ -98,7 +92,7 @@
 
                         <div class="row">
                             <label for="fuel-type">Fuel type:</label>
-                            <select id="fuel-type" name="fuel">
+                            <select id="fuel-type" name='fuel'>
                                 <option value="">Select a fuel type</option>
                                 {% for fuel in fuels%}
                                 <option value="{{fuel.fuel}}">{{fuel.fuel | upper }}</option>
@@ -108,7 +102,7 @@
                         </div>
                         <div class="row">
                             <label for="seater">Seater:</label>
-                            <select id="seater" name="seating">
+                            <select id="seater" name='seating'>
                                 <option value="">Select a seater</option>
                                 {% for seat in seats%}
                                 <option value="{{seat.seat_capacity}}">{{seat.seat_capacity | upper }}</option>
